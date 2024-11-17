@@ -1,0 +1,112 @@
+* {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    background-color: #A7C7E7;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circulo{
+    border-radius: 50%;
+    position: absolute;
+    z-index: -5;
+}
+
+.circ1{
+    background: linear-gradient(210deg, #FF930F, #FFF95B );
+    width: 25em;
+    height: 25em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-220%, -5%);
+}
+
+.circ2{
+    background: linear-gradient(210deg, #9BF8F4, #6F7BF7 80% );
+    width: 12em;
+    height: 12em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-220%, 120%);
+}
+
+.circ3{
+    background: linear-gradient(210deg, #45CAFF, #FF930F );
+    width: 18em;
+    height: 18em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+}
+
+.circ4{
+    background: linear-gradient(210deg, #003DA5 20%, #FF6600 );
+    width: 20em;
+    height: 20em;
+    top: 50%;
+    left: 50%;
+    transform: translate(80%, -30%);
+}
+
+.card{
+    height: 40em;
+    width: 80em;
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) 0%, rgba(255, 255, 255, 0.1)100%);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
+}
+
+.card1{ 
+    display: grid;
+    height: 40em;
+    width: 25em;
+    background: linear-gradient(145deg, rgba(215, 205, 232, 0.4) 0%, rgba(255, 255, 255, 0.5)100%);
+    border-radius: 30px 0px 0px 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
+    float: left;
+}
+
+#logo{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center;
+}
+
+#bemVindo{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}
+
+#insc{
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+    justify-self: center;
+    align-self: center;
+}
+
+#criar{
+    border-radius: 1em;
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+}
