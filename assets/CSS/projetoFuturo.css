@@ -1,0 +1,176 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+/* Navbar mobile,tablet e PC */
+.header-menu-principal {
+    background-color: #003DA5;
+    position: relative;
+    padding: 10px 30px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr;
+    grid-template-areas: 
+        "inicio futuro logo-space sobre passagens login";
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Espaço reservado para o logo */
+.logo-wrapper {
+    grid-area: logo-space;
+    height: 100%;
+    visibility: hidden;
+}
+
+/* Logo container com fundo branco */
+.logo-container {
+    background-color: white;
+    padding: 15px 25px;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo-container img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+/* Posicionando cada item em sua área */
+.menu a:nth-child(1) { 
+    grid-area: inicio; 
+}
+.menu a:nth-child(2) { 
+    grid-area: futuro; 
+}
+.menu a:nth-child(5) { 
+    grid-area: sobre;
+    justify-self: end;
+    padding-right: 10px;
+}
+.menu a:nth-child(6) { 
+    grid-area: passagens;
+    justify-self: start;
+    padding-left: 20px;
+}
+.menu a:nth-child(7) { 
+    grid-area: login;
+    justify-self: end;
+}
+
+/* Estilo para os links */
+.menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo específico para o ícone de usuário */
+.user-icon {
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Media Query para tablets */
+@media screen and (max-width: 768px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "logo-space login"
+            "inicio futuro"
+            "sobre passagens";
+        gap: 25px;
+        padding-top: 70px;
+    }
+
+    .logo-container {
+        padding: 10px 15px;
+        top: -20px;
+    }
+
+    .logo-container img {
+        width: 100px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .menu a:nth-child(5),
+    .menu a:nth-child(6) {
+        padding: 0;
+        justify-self: center;
+    }
+}
+
+/* Media Query para mobile */
+@media screen and (max-width: 480px) {
+    .menu {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "logo-space"
+            "login"
+            "inicio"
+            "futuro"
+            "sobre"
+            "passagens";
+        gap: 10px;
+        padding-top: 80px;
+    }
+
+    .logo-container {
+        padding: 8px 12px;
+        top: -25px;
+    }
+
+    .logo-container img {
+        width: 80px;
+    }
+
+    .menu a {
+        font-size: 12px;
+    }
+
+    .menu a:nth-child(7) {
+        justify-self: center;
+    }
+}
+/* FIM da Navbar mobile,tablet e PC */
+
+
+.banner-principal {
+  width: 100%;
+}
+
+.conteudo-principal {
+  display: grid;
+  grid: auto 20px auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.faixa-laranja {
+  background-color: #ff6600;
+  position: relative;
+  height: 350px;
+  width: 100%;
+  margin: 0 auto;
+  clip-path: polygon(100% 0, 100% 100%, 0 10%, 0 0);
+}
