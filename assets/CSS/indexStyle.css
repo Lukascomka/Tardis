@@ -1,0 +1,13 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#painelInicio{
+    background-image: url(../IMG/indexfundoPainel.png);
+}
+
+#saibaMais{
+    background-image: url(../IMG/indexSaibaMais.png);
+
+}
