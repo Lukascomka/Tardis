@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputs = form.querySelectorAll('input');
     const submitButton = form.querySelector('button[type="submit"]');
 
-    // Adiciona listeners para cada campo
+   
     inputs.forEach(input => {
-        // Validação quando o campo perde o foco
+      
         input.addEventListener('blur', () => {
             validateField(input);
             submitButton.disabled = !isFormValid();
@@ -118,22 +118,22 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         if (isFormValid()) {
-            // Seu código original do modal aqui
+            
             const modal = document.getElementById('successModal');
             modal.style.display = 'flex';
         }
     });
 });
 
-// Suas funções originais do modal
+
 function closeModal() {
     const modal = document.getElementById('successModal');
     modal.style.display = 'none';
-    // Opcional: limpar o formulário após o envio
+  
     document.getElementById('cadastroForm').reset();
 }
 
-// Fechar o modal se clicar fora dele
+
 window.onclick = function (event) {
     const modal = document.getElementById('successModal');
     if (event.target == modal) {

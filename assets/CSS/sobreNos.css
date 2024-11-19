@@ -1,0 +1,141 @@
+/* Resetando margens e espaçamentos padrão de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Define como o tamanho do elemento será calculado, incluindo borda e padding */
+}
+
+/* Garantindo que o html e o body ocupem a altura total da viewport e configurando o fundo branco */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Altura mínima igual à altura da tela */
+  background-color: white; /* Cor de fundo branca */
+}
+
+/* Adicionando uma faixa laranja no topo da página */
+body::before {
+  content: ""; /* Insere conteúdo vazio */
+  position: absolute; /* Posiciona relativo ao elemento pai mais próximo com posição definida */
+  top: 0; /* Posiciona no topo da página */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Ocupa toda a largura */
+  height: 33.33vh; /* Altura equivalente a 1/3 da altura da viewport */
+  background-color: #ff6b00; /* Cor laranja */
+  z-index: 0; /* Define a ordem de sobreposição */
+}
+
+/* Adicionando uma faixa laranja na parte inferior da página */
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Posiciona na parte inferior */
+  left: 0;
+  width: 100%;
+  height: 33.33vh;
+  background-color: #ff6b00;
+  z-index: 0;
+}
+
+/* Estilo para o container principal */
+.container {
+  position: relative; /* Posicionamento relativo ao fluxo normal */
+  max-width: 1200px; /* Largura máxima do container */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  padding: 20px; /* Espaçamento interno */
+  background-color: white; /* Fundo branco para o conteúdo */
+  min-height: 100vh; /* Altura mínima igual à altura da viewport */
+  z-index: 1; /* Coloca o container acima das faixas laranjas */
+  border: 15px solid #595959; /* Moldura cinza */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+}
+
+/* Estilo para o cabeçalho do menu principal */
+.header-menu-principal {
+  background-color: #003da5; /* Cor azul para o fundo */
+  position: relative;
+  padding: 15px 40px; /* Espaçamento interno */
+  margin-left: -1.85%; /* Ajuste para alinhar à esquerda */
+  margin-right: -1.85%; /* Ajuste para alinhar à direita */
+  margin-top: -1.85%; /* Ajuste para alinhar ao topo */
+}
+
+/* Estilo para o menu principal */
+.menu {
+  display: grid; /* Define um layout baseado em grid */
+  grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr; /* Define o tamanho relativo das colunas */
+  grid-template-areas: 
+    "inicio futuro logo-space sobre passagens login"; /* Nomeia áreas específicas no grid */
+  align-items: center; /* Alinha itens verticalmente ao centro */
+  gap: 20px; /* Espaçamento entre os itens */
+  max-width: 1200px; /* Largura máxima do menu */
+  margin: 0 auto; /* Centraliza o menu */
+  position: relative;
+}
+
+/* Área reservada para o logo */
+.logo-wrapper {
+  grid-area: logo-space; /* Posiciona no espaço nomeado como "logo-space" */
+  height: 100%; /* Altura total do container */
+  visibility: hidden; /* Oculta o elemento */
+}
+
+/* Container do logo com fundo branco */
+.logo-container {
+  background-color: white; /* Fundo branco */
+  padding: 15px 25px; /* Espaçamento interno */
+  border-radius: 0 0 15px 15px; /* Bordas arredondadas apenas na parte inferior */
+  position: absolute; /* Posiciona em relação ao primeiro pai posicionado */
+  top: -15px; /* Levanta o elemento */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta para o centro exato */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  z-index: 1000; /* Fica acima de outros elementos */
+}
+
+.logo-container img {
+  width: 120px; /* Largura fixa */
+  height: auto; /* Altura proporcional */
+  display: block; /* Remove espaçamento indesejado */
+}
+
+/* Posicionando itens do menu em áreas específicas */
+.menu a:nth-child(1) {
+  grid-area: inicio;
+}
+.menu a:nth-child(2) {
+  grid-area: futuro;
+}
+.menu a:nth-child(5) {
+  grid-area: sobre;
+  justify-self: end; /* Alinha à direita */
+  padding-right: 10px; /* Espaçamento interno à direita */
+}
+.menu a:nth-child(6) {
+  grid-area: passagens;
+  justify-self: start; /* Alinha à esquerda */
+  padding-left: 20px; /* Espaçamento interno à esquerda */
+}
+.menu a:nth-child(7) {
+  grid-area: login;
+  justify-self: end; /* Alinha à direita */
+}
+
+/* Estilo geral para os links */
+.menu a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: white; /* Cor branca para o texto */
+  text-align: center; /* Centraliza o texto */
+  white-space: nowrap; /* Impede quebra de linha */
+  font-size: 16px; /* Tamanho da fonte */
+  position: relative;
+  z-index: 1; /* Mantém o texto visível acima dos outros elementos */
+}
+
+/* Estilo específico para o ícone de usuário */
+.user-icon {
+  width: 25px; /* Define a largura fixa */
+  height: auto; /* Mantém a proporção */
+  vertical-align: middle; /* Alinha verticalmente ao meio */
+}
