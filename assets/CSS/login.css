@@ -61,10 +61,11 @@ body{
 }
 
 .card{
-    height: 40em;
-    width: 80em;
+    display: grid;
+    height: 25em;
+    width: 30em;
     background: linear-gradient(145deg, rgba(0,61,165,0.2) 0%, rgba(255, 255, 255, 0.1)100%);
-    border-radius: 30px;
+    border-radius: 0px 30px 30px 0px;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
@@ -72,8 +73,8 @@ body{
 
 .card1{ 
     display: grid;
-    height: 40em;
-    width: 25em;
+    height: 25em;
+    width: 15em;
     background: linear-gradient(145deg, rgba(215, 205, 232, 0.4) 0%, rgba(255, 255, 255, 0.5)100%);
     border-radius: 30px 0px 0px 30px;
     backdrop-filter: blur(20px);
@@ -81,6 +82,8 @@ body{
     box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
     float: left;
 }
+
+/* grid card1 */
 
 #logo{
     grid-column: 2 / 3;
@@ -106,6 +109,78 @@ body{
 #criar{
     border-radius: 1em;
     grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+}
+
+/* grid card */
+
+#txtLogin{
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}
+
+#imgPessoa{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+}
+
+#usuario{
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+}
+
+#cadeado{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-self: center;
+    align-self: center;
+}
+
+#senha{
+    grid-column: 2 / 5;
+    grid-row: 4 / 5;
+    justify-self: center;
+    align-self: center;
+}
+
+#olho{
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+    justify-self: center;
+    align-self: center;
+}
+
+#check{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+}
+
+#lembrar{
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+}
+
+#esqueceu{
+    grid-column: 3 / 6;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+}
+
+#entrar{
+    grid-column: 2 / 5;
     grid-row: 5 / 6;
     justify-self: center;
     align-self: center;
