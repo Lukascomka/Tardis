@@ -24,26 +24,25 @@
             CRIAR CONTA
         </button>
     </div>
-    <button>
+    <button id="setas">
         <img src="" alt="">
     </button>
     <div class="card"> <!-- Retângulo login -->
-        <div>
-            <p id="txtLogin">FAÇA LOGIN</p>
-            <div>
-                <img id="imgPessoa" src="" alt="">
-                <input id="usuario" placeholder="USUÁRIO" type="text" name="" id="">
-            </div>
-            <div>
-                <img id="cadeado" src="" alt="">
-                <input id="senha" placeholder="SENHA" type="password" name="" id="">
-                <img id="olho" src="" alt="">
-            </div>
-            <input id="check" type="checkbox" name="" id="">
-            <label id="lembrar">LEMBRAR SENHA</p>
-            <a id="esqueceu" href="">ESQUECEU A SENHA?</label>
-            <button id="entrar">ENTRAR</button>
+        <p id="txtLogin">FAÇA LOGIN</p>
+        <div class="input-usuario">
+            <img id="imgPessoa" src="./assets/IMG/usuario.png" alt="">
+            <input id="usuario" placeholder="USUÁRIO" type="text" name="">
         </div>
+        <div class="input-senha">
+            <img id="cadeado" src="./assets/IMG/cadeado.png" alt="">
+            <input id="senha" placeholder="SENHA" type="password" name="">
+        </div>
+        <div class="check-container">
+            <input type="checkbox" id="lembrar" name="lembrar">
+            <label for="lembrar">Lembrar senha</label>
+            <a href="#" class="esqueceu">Esqueceu a senha?</a>
+        </div>
+        <button id="entrar">ENTRAR</button>
     </div>
 </body>
 </html>
