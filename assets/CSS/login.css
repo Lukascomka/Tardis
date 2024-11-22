@@ -110,7 +110,7 @@ body{
 #insc{
     grid-column: 1 / 4; 
     grid-row: 3 / 4;
-    justify-self: start; /* Centraliza horizontalmente */
+    justify-self: center; /* Centraliza horizontalmente */
     align-self: center; /* Centraliza verticalmente */
     font-size: x-large; /* Aumenta o tamanho da fonte */
     position: relative; /* Para o sublinhado */
@@ -138,7 +138,8 @@ body{
     align-self: center;
     background: linear-gradient(145deg, rgba(215, 205, 232, 0.4) 0%, rgba(255, 255, 255, 0.5)100%);
     backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);    color: blue; /* Define a cor do texto como azul */
+    -webkit-backdrop-filter: blur(20px);
+    color: blue; /* Define a cor do texto como azul */
     border: none; /* Remove a borda padrão do botão */
     padding: 10px 20px; /* Adiciona espaçamento interno */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
@@ -197,7 +198,7 @@ body{
     position: absolute; /* Para posicionar a imagem dentro do input */
     left: 0.5em; 
     top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-85%); /* Centraliza verticalmente */
+    transform: translateY(-75%); /* Centraliza verticalmente */
     width: 2em; 
     height: 2em;
     pointer-events: none; /* Para que cliques na imagem não afetem a interação com o input */
@@ -264,7 +265,7 @@ body{
     position: absolute; /* Permite o posicionamento absoluto */
     top: 50%; 
     left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-350%, -30%); /* Centraliza o botão */
+    transform: translate(-350%, -40%); /* Centraliza o botão */
     border: none; /* Sem borda */
     border-radius: 50%; /* Bordas arredondadas */
     padding: 10px 20px; /* Espaçamento interno */
