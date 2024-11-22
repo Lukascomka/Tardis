@@ -284,9 +284,3 @@ body{
     width: 20px; 
     height: 20px;
 }
-
-@media (max-width: 768px) {
-    .card {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
