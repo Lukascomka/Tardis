@@ -158,7 +158,7 @@ body{
     color: #003DA5;
 }
 
-.input-usuario {
+.inputUsuario {
     position: relative; /* Para posicionar a imagem dentro do input */
     grid-column: 2 / 5;
     grid-row: 3 / 4;
@@ -186,7 +186,7 @@ body{
     font-size: 16px; /* Tamanho da fonte */
 }
 
-.input-senha {
+.inputSenha {
     position: relative; /* Para posicionar a imagem dentro do input */
     margin-bottom: 10px; /* Espaçamento inferior */
     grid-column: 2 / 5;
@@ -206,19 +206,19 @@ body{
 }
 
 #senha {
-    padding-left: 40px; /* Adiciona padding à esquerda para evitar sobreposição com a imagem */
+    padding-left: 40px; /* Espaço para a imagem do cadeado */
     width: 100%; /* Faz o input ocupar toda a largura do container */
     box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
     border-radius: 15px; /* Arredondando as bordas */
     border: 1px solid rgba(0, 61, 165, 0.5); /* Borda com transparência */
-    background: linear-gradient(145deg, rgba(0,61,165,0.2) -400%, rgba(255, 255, 255, 0.1)100%);
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) -400%, rgba(255, 255, 255, 0.1) 100%);
     backdrop-filter: blur(10px); /* Efeito de desfoque de fundo */
-    height: 40px;
+    height: 40px; /* Altura do input */
     font-size: 16px; /* Tamanho da fonte */
     z-index: 2; /* Coloca o campo de senha acima do ícone */
 }
 
-.check-container {
+.checkContainer {
     display: flex; /* Usando flexbox para alinhar os elementos */
     align-items: end; /* Alinha verticalmente os itens */
     margin-top: 10px; /* Espaçamento entre o input de senha e este contêiner */
@@ -228,11 +228,11 @@ body{
     z-index: 1;
 }
 
-.check-container input[type="checkbox"] {
+.checkContainer input[type="checkbox"] {
     margin-right: 2px; /* Espaçamento entre o checkbox e a label */
 }
 
-.check-container label {
+.checkContainer label {
     margin-right: 30px; /* Aumenta o espaço entre a label e o link */
 }
 
@@ -284,4 +284,110 @@ body{
     transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
     width: 20px; 
     height: 20px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .circulo {
+        width: 15em;
+        height: 15em;
+    }
+
+    .circ1 {
+        width: 15em;
+        height: 15em;
+        transform: translate(-100%, -50%);
+    }
+
+    .circ2 {
+        width: 8em;
+        height: 8em;
+        transform: translate(-150%, 80%);
+    }
+
+    .circ3 {
+        width: 10em;
+        height: 10em;
+        transform: translate(-30%, -100%);
+    }
+
+    .circ4 {
+        width: 12em;
+        height: 12em;
+        transform: translate(50%, -30%);
+    }
+
+    .card {
+        height: 20em;
+        width: 90%; /* Ajusta para ocupar 90% da largura da tela */
+        max-width: 400px; /* Limita a largura máxima */
+    }
+
+    .card1 {
+        height: 20em;
+        width: 20%; /* Ajusta para ocupar 80% da largura da tela */
+        max-width: 300px; /* Limita a largura máxima */
+    }
+
+    #logo {
+        width: 100%; /* Ajusta a largura da imagem */
+    }
+
+    #bemVindo {
+        font-size: large; /* Ajusta o tamanho da fonte */
+    }
+
+    #insc {
+        font-size: large; /* Ajusta o tamanho da fonte */
+    }
+
+    #criar {
+        padding: 8px 16px; /* Reduz o padding */
+        font-size: medium; /* Ajusta o tamanho da fonte */
+    }
+
+    #txtLogin {
+        font-size: x-large; /* Ajusta o tamanho da fonte */
+    }
+
+    #usuario,
+    #senha {
+        height: 35px; /* Ajusta a altura dos inputs */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    #entrar {
+        padding: 8px 16px; /* Reduz o padding */
+        font-size: medium; /* Ajusta o tamanho da fonte */
+    }
+
+    #setas {
+        display: none;
+    }
+
+    .checkContainer {
+        display: flex; /* Usando flexbox para alinhar os elementos */
+        align-items: center; /* Alinha verticalmente os itens */
+        margin-top: 40px; /* Espaçamento entre o input de senha e este contêiner */
+        grid-column: 2 / 5;
+        grid-row: 4 / 5;
+        justify-content: space-between; /* Distribui o espaço entre os itens */
+    }
+
+    .checkContainer input[type="checkbox"] {
+        margin-right: 5px; /* Espaçamento entre o checkbox e a label */
+    }
+
+    .checkContainer label {
+        font-size: 14px; /* Ajusta o tamanho da fonte da label */
+        margin-right: 10px; /* Aumenta o espaço entre a label e o link */
+    }
+
+    #esqueceu {
+    font-size: 10px; /* Tamanho da fonte do link */
+    }
+
+    #cadeado {
+        transform: translateY(-65%); /* Centraliza verticalmente */
+    }
 }
