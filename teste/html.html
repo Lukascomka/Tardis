@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: blue;
+      }
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 60px;
+        cursor: pointer;
+      }
 
-<link rel="stylesheet" href="teste.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
+      .arrow {
+        position: absolute;
+        top: 25px;
+        width: 90%;
+        height: 8px;
+        background-color: #fff;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        animation: arrow 700ms linear infinite;
+      }
+
+      .arrow::after,
+      .arrow::before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 8px;
+        right: -8px;
+        background-color: #fff;
+      }
+
+      .arrow::after {
+        top: -12px;
+        transform: rotate(45deg);
+      }
+
+      .arrow::before {
+        top: 12px;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        transform: rotate(-45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="icon">
+      <div class="arrow"></div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="tjs.js"></script>
-</body>
+  </body>
 </html>
