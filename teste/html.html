@@ -1,56 +1,275 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <style>
-      body {
-        background-color: blue;
-      }
-      .icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80px;
-        height: 60px;
-        cursor: pointer;
-      }
-
-      .arrow {
-        position: absolute;
-        top: 25px;
-        width: 90%;
-        height: 8px;
-        background-color: #fff;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-        animation: arrow 700ms linear infinite;
-      }
-
-      .arrow::after,
-      .arrow::before {
-        content: "";
-        position: absolute;
-        width: 60%;
-        height: 8px;
-        right: -8px;
-        background-color: #fff;
-      }
-
-      .arrow::after {
-        top: -12px;
-        transform: rotate(45deg);
-      }
-
-      .arrow::before {
-        top: 12px;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-        transform: rotate(-45deg);
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="teste.css" />
   </head>
-
   <body>
-    <div class="icon">
-      <div class="arrow"></div>
-    </div>
+    <header class="header-menu-principal">
+      <nav class="menu">
+        <a href="../index.html">Página Inicial</a>
+        <a href="../projetoFuturo.html">Futuro Brilhante</a>
+        <div class="logo-wrapper"></div>
+        <div class="logo-container">
+          <a href="home.html">
+            <img
+              src="../assets/IMG/logo thardiss.png"
+              alt="Logo da empresa Tardis. Representado por um globo terrestre, um avião dando a volta da esquerda para direita e embaixo o nome Tardis em destaque."
+            />
+          </a>
+        </div>
+        <a href="sobreNos.html">Sobre Nós</a>
+        <a href="Passagens.html">Passagens Aéreas</a>
+        <a href="login.html">
+          <img
+            src="../assets/IMG/user.png"
+            alt="Icon de Login"
+            class="user-icon"
+          />
+        </a>
+      </nav>
+    </header>
+    <main>
+      <section class="banner">
+        <h1 class="title">
+          Viaje para lugares <br />
+          incríveis
+        </h1>
+      </section>
+      <section class="pesquisa">
+        <div class="controller">
+          <div class="pesquisa-lista">
+            <div class="itempesquisa active">
+              <i class="figure1"></i>
+              <button class="btn-pesquisar">Buscar Voos</button class="btn-pesquisar">
+            </div>
+            <div class="itempesquisa">
+              <i class="figure2"></i>
+              <button class="btn-pesquisar">Buscar intercambio</button class="btn-pesquisar">
+            </div>
+            <div class="itempesquisa">
+              <i class="figure3"></i>
+              <button class="btn-pesquisar">Buscar Pacotes</button class="btn-pesquisar">
+            </div>
+          </div>
+          <div class="pesquisa-conteudo">
+            <form>
+              <input type="text" placeholder="Informações do Voo" />
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="slider">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/IMG/indexDestino1.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/IMG/indexDestino2.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/IMG/indexDestino3.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/IMG/indexDestino4.png" alt="" />
+            </div>
+            <div class="swiper-slide swipe5">
+              <img src="../assets/IMG/indexDestino5.png" alt="" />
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <div class="top-destinos">
+          <span class="item1"> 10+</span>
+          <span class="item2">top destinos<br />intercâmbio</span>
+          <div class="item3">
+            <button >explore destinos</button>
+            <div class="icon">
+              <div class="seta-com-traco">
+                <div class="traco"></div>
+                <div class="ponta"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="locations">
+        <div class="columns">
+          <div class="column limit-height">
+            <div class="island">
+              <img src="../assets/IMG/indexMaldivas.png" alt="">
+              <div class="info">
+                <div class="details">
+                  <div class="title">
+                    Maldivas
+                  </div>
+                  <div class="locations-details">
+                    <i></i>
+                    <small>Tailandia</small>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>R$1000</span>
+                </div>
+              </div>
+            </div>
+            <div class="island">
+              <img src="../assets/IMG/indexCancun.png" alt="">
+                      <div class="info">
+                <div class="details">
+                  <div class="title">
+                    Cancun
+                  </div>
+                  <div class="locations-details">
+                    <i></i>
+                    <small>México</small>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>R$1000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="islands">
+              <div class="island">
+                <img src="../assets/IMG/indexCastelo.png" alt="">
+                <div class="info">
+                <div class="details">
+                  <div class="title">
+                    Castelo travel
+                  </div>
+                  <div class="locations-details">
+                    <i></i>
+                    <small>Alemanha</small>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>R$350</span>
+                </div>
+              </div>
+              </div>
+              <div class="island">
+                <img src="../assets/IMG/indexMonte.png" alt="">
+                <div class="info">
+                <div class="details">
+                  <div class="title">
+                    Monte Fuji
+                  </div>
+                  <div class="locations-details">
+                    <i></i>
+                    <small>Japão</small>
+                  </div>
+                </div>
+                <div class="price">
+                  <span>R$550</span>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="top-destinos">
+              <span class="item1"> 10+</span>
+              <p class="item2">top destinos intercâmbio</p>
+              <div class="item3">
+                <button>explore destinos</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projeto">
+        <div class="content">
+        <div class="columns">
+          <div class="title">Projeto Futuro Brilhante !</div>
+          <div class="text">
+            <p>Aventure-se em um</p>
+            <p>novo mundo!</p>
+          </div>
+          <div class="figures">
+            <div class="collapse">
+              <div class="colx active">
+                <div class="col-title">
+                  Inscreva-se
+                </div>
+                <div class="col-overflow">
+                  <p> A primeira etapa do programa <b>Futuro Brilhante</b> é a inscrição. Aqui, os candidatos preenchem um formulário com informações pessoais e compartilham suas motivações para participar do intercâmbio. Essa é a oportunidade de mostrar por que você merece essa experiência transformadora!</p>
+                </div>
+              </div>
+              <div class="colx">
+                <div class="col-title">
+                  Analise da candidatura
+                </div>
+                <div class="col-overflow">
+                  Depois de se inscrever, sua candidatura passa por uma análise criteriosa. A equipe do programa avalia cuidadosamente o perfil dos participantes, considerando motivação, alinhamento com os objetivos do projeto e critérios específicos para selecionar os candidatos mais adequados. 
+                </div>
+              </div>
+              <div class="colx">
+                 <div class="col-title">
+                  Aprovado para o projeto
+                </div>
+                <div class="col-overflow">
+                  Os candidatos aprovados recebem uma confirmação oficial de participação no programa. Nesta etapa, são fornecidos os detalhes sobre o intercâmbio, incluindo informações práticas, cronogramas e próximos passos. É o momento de se preparar para viver essa incrível experiência!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <img src="../assets/IMG/indexProjetoSegunda.png" alt="">
+        </div>
+      </div>
+      </section>
+      <section class="saiba-mais">
+        <div class="text">
+          <h1>Saiba mais sobre <b>nosso projeto</b></h1>
+          <h1><b>e nossa empresa.</b></h1>
+          <p>Projeto futuro brilhante encaminhando jovens de </p>
+          <p>comunidades carentes a desbravar um universo de </p>
+          <p>oportunidade.</p>
+        </div>
+        <div class="buttons-more">
+          <button class="button-more active botao" id="btn-empresa">Empresa</button>
+          <button class="button-more" id="btn-projeto">Projeto</button>
+        </div>
+      </section>
+      <section class="viaje-conosco">
+        <div class="content text">
+        <h1>Por que viajar conosco?</h1>
+        <p>Se ainda surgir alguma dúvida de porque realizar seu intercâmbio conosco</p>
+        </div>
+        <div class="content list">
+          <img src="../assets/IMG/Viajante.png" alt="">
+          <ol>
+            <li>Por que viajar com a Thardis?</li>
+            <p>Oferecemos oportunidades únicas com propósito social.</p>
+            <hr>
+            <li>Oque seria uma empresa com foco social?</li>
+            <p>É uma organização que promove impacto positivo e inclusão.</p>
+            <hr>
+            <li>Principal objetivo?</li>
+            <p>Transformar a vida de jovens e adultos através</p>
+            <p>de passagens aéreas e intercâmbio gratuito para</p>
+            <p>jovens de baixa renda..</p>
+          </ol>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="tjs.js"></script>
   </body>
 </html>
