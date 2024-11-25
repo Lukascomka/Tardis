@@ -38,7 +38,7 @@ section {
 
       .pesquisa-lista {
         display: flex;
-        .item {
+        .itempesquisa {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -47,11 +47,12 @@ section {
           font-size: larger;
           flex: 1 auto;
           height: 80px;
+          background-color: #ff6600;
           &:not(:last-child) {
             border-right: 1px solid white;
           }
 
-          &.item1 {
+          /* &.item1 {
             background-color: #003da5;
           }
 
@@ -61,17 +62,45 @@ section {
 
           &.item3 {
             background-color: #ff6600;
-          }
+          } */
 
           i {
             display: block;
-            width: 20px;
-            height: 20px;
-            background: white;
+            width: 50px;
+            height: 40px;
+            /* background: white; */
             border-radius: 20px;
             aspect-ratio: 1/1;
+            background-repeat: no-repeat;
+            
           }
+
+          .figure1{
+            background-image: url(../IMG/plane.png);
+
+          }
+
+          .figure2{
+            background-image: url(../IMG/plane.png);
+
+          }
+          .figure3{
+            background-image: url(../IMG/plane.png);
+
+          }
+
+
+          .btn-pesquisar{
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+          }
+
         }
+        .active{
+          background-color: #003da5;
+        }
+
+
       }
 
       .pesquisa-conteudo {
@@ -195,11 +224,12 @@ body {
     margin: 0 20px 0 auto;
     border-radius: 30px;
 
-    a {
+    button {
       color: #003da5;
       font-weight: bolder;
       font-size: 20px;
       text-decoration: none;
+      border: 0;
     }
   }
 }
@@ -237,148 +267,392 @@ body {
 
 /* swiper fim */
 
-/* top turismos */
+section {
+  &.locations {
+    margin-top: 300px;
+    .columns {
+      display: flex;
+      width: 100%;
+      margin-bottom: 50px;
+      gap: 20px;
+      .column {
+        flex: 1 auto;
+        height: 800px;
+        /* border: 2px dashed pink; */
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
 
-.turismo-imagens {
-  display: flex;
-  margin-top: 300px;
-  margin-left: 30px;
-  height: 830px;
-  width: 100%;
-}
+        .islands {
+          display: flex;
+          height: 80%;
+          gap: 20px;
+        }
 
-.destino1 {
-  display: flex; /* Alinha as imagens horizontalmente */
-  flex-direction: column; /* Alinha as imagens verticalmente */
-  align-items: flex-start; /* Alinha à esquerda */
-  gap: 20px;
-  width: 30%;
-}
+        .island {
+          height: 100%;
+          width: 100%;
+          /* border: 1px solid black; */
+          display: flex;
+          position: relative;
+          justify-content: center;
 
-.destino1-div .imagemDestino1 {
-  height: 350px;
-  width: 100%;
-  
-}
+          .info {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            padding: 16px 32px;
+            color: white;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 48px;
+            border-radius: 16px;
 
-.destino1-div2 .imagemDestino2 {
-  align-self: flex-start; /* Garante alinhamento à esquerda */
-  height: 400px;
-  width: 100%;
-}
+            .price {
+              font-weight: 700;
+              font-size: larger;
+            }
 
-.destino2{
-  display: flex;
-  flex: 1;
-  gap: 10px;
-  height: 600px;
+            .locations-details {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              margin-top: 4px;
+            }
+          }
 
-}
-.destino2-div img{
- 
-  width: 100%;
-  height: 600px;
-}
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 0 -40px;
+            border-radius: 40px;
+          }
+        }
 
-.destino2-div2 img{
-  margin-left: 50px;
-  width: 100%;
-  height: 600px;
-}
+        .top-destinos {
+          margin-left: 40%;
+          width: 60%;
+        }
 
+        &.limit-height {
+          .island {
+            max-height: 49%;
+            &:last-child {
+              max-height: 49.5%;
+            }
+          }
+        }
 
-
-
-
-.top-destinos3 {
-  margin: 30px 0 0 25%;
-  display: flex;
-  align-items: center;
-  height: 120px;
-  width: 80%;
-  background-color: #003da5;
-  border-radius: 25px;
-
-
-  .item1 {
-    color: white;
-    font-size: 70px;
-    margin-left: 30px;
-    font-weight: bolder;
+        &:first-child {
+          max-width: 30%;
+          min-width: 30%;
+        }
+      }
+    }
   }
+}
 
-  .item2 {
-    color: white;
-    font-size: 25px;
-    margin-left: 30px;
-    font-weight: bolder;
-  }
+section {
+  &.projeto {
+    margin-top: 300px;
+    .content {
+      display: flex;
+      .columns {
+        display: flex;
+        margin: 0px 50px 0px 50px;
+        height: 100vh;
+        width: 100%;
+        /* border: 1px solid black; */
+        position: relative;
+        img{
+          margin-left: 10%;
+          width: auto;
+          height: auto;
+          
+        }
 
-  .item3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 65px;
-    width: 350px;
-    background-color: white;
-    margin: 0 20px 0 auto;
-    border-radius: 30px;
+        .title{
+          font-size: 2em;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 15%;
+          color: white;
+          background-color: #003DA5;
+          width: 70%;
+          height: 6%;
+          border-radius: 32px;
+        }
 
-    a {
-      color: #003da5;
-      font-weight: bolder;
-      font-size: 20px;
-      text-decoration: none;
+        .text{
+          position: absolute;
+          margin: 10% 0 0 15%;
+          p{
+            font-size: 3.5em;
+            margin-bottom: 0px;
+          }
+        }
+
+        .figures{
+          align-self: flex-end;
+          /* border: 1px solid black; */
+          height: 418px;
+          width: 300px;
+          position: absolute;
+          margin-left: 10%;
+          margin-bottom: 80px;
+
+          .collapse {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            /* border: 1px dashed pink; */
+            .colx {
+              position: relative;
+              height: 50px;
+              width: 100%;
+              /* border: 1px dashed black; */
+              transition: all .45s ease-in-out;
+              cursor: pointer;
+              overflow: hidden;
+              
+              .col-overflow {
+                transition: all .45s ease-in-out;
+                opacity: 0;
+                height: 0;
+              }
+          
+              .col-title {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                padding: 8px;
+                
+                &:before {
+                  content: '';
+                  display: block;
+                  border: 2px solid black;
+                  width: 25px;
+                  height: 25px;
+                  aspect-ratio: 1/1;
+                  border-radius: 100%;
+                }
+              }
+              
+              &.active {
+                flex: 1 1;
+                overflow: visible;
+                &:before {
+                  content: '';
+                  position: absolute;
+                  height: calc(100% - 60px);
+                  transform: translate(22px, 45px);
+                  width: 2px;
+                  background: black;
+                }
+                .col-overflow {
+                  padding: 8px 32px 16px 60px;
+                  /* text-align: justify; */
+                  height: 79%;
+                  max-height: 79%;
+                  overflow-y: auto;
+                  opacity: 1;
+                }
+                .col-title {
+                  font-size: larger;
+                  font-weight: bold;
+                  
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    border: 2px solid black;
+                    background: black;
+                    width: 15px;
+                    height: 15px;
+                    transform: translate(5px, 0);
+                    aspect-ratio: 1/1;
+                    border-radius: 100%;
+                  }
+                }
+              }
+            }
+          }
+
+/* 
+        .circle{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 3em;
+          width: 3em;
+          border: black 1px solid;
+          aspect-ratio: 1/1;
+          border-radius: 100%;
+
+
+          &:nth-child(3){
+            margin-bottom: 3em;
+            margin-top: 1em;
+          }
+
+
+          &:first-child {
+            margin-bottom: 1em;
+          }
+
+          .circle-full{
+            background-color: black;
+            height: 2em;
+            width: 2em;
+            border: black 1px solid;
+            aspect-ratio: 1/1;
+            border-radius: 100%;
+          }
+
+        }
+
+        .square{
+          width: 0.5em;
+          height: 50%;
+          background-color: black;
+          margin-left: 16px
+        } */
+        }
+      }
     }
   }
 }
 
 
+section {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#saibaMais {
+  &.saiba-mais{
+  position: relative;
   background-image: url(../IMG/indexSaibaMais.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -100px;
+  margin: 300px 0 0 0;
+  color: white;
+
+  .text{
+    padding: 100px 0px 0px 50px;
+    h1{
+      font-size: 6em;
+    }
+    p{
+      font-size: 1.5em;
+      margin: 0;
+      &:nth-child(3) {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .buttons-more{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    height: 80px;
+    gap: 50px;
+    top: 80%;
+    left: 50px;
+    .button-more{
+      background-color: rgba(0, 0, 0, 0);
+      color: white;
+      width: 100%;
+      font-size: 3.5em;
+      font-style: italic;
+      border-radius: 16px;
+    }
+    .active{
+      background-color: white;
+      color: #000;
+    }
+  }
 }
+  
+}
+
+
+
+
+section{
+  &.viaje-conosco{
+    margin: 200px 0 0 0;
+    margin-left: 15%;
+    display: flex;
+    width: 70%;
+    height: 80vh;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    .content{
+      /* border: 2px solid black; */
+      width: 100%;
+      height: 100%;
+      flex: 1 auto;
+
+      &:first-child{
+        max-height: 30%;
+      }
+    }
+
+    .text{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1, p{
+        position: absolute;
+        font-style: italic;
+      }
+
+      h1{
+        color: blue;
+        font-size: 4.5em;
+      }
+
+      p{
+        top: 75%;
+        font-size: larger;
+      }
+
+    }
+
+    .list{
+      display: flex;
+      align-items: center;
+      /* justify-content: center; */
+      margin-left: 70px;
+      img{
+        height: 360px;
+        width: 304px;
+      }
+
+      ol{
+
+         p{
+           margin: 0px;
+           font-style: italic;
+         }
+         li{
+          font-weight: 900;
+         }
+         hr{
+          width: 110%;
+
+         }
+      }
+    }
+    
+  }
+}
+
 
 /* Código Lucas abaixo */
 body {
@@ -556,3 +830,4 @@ body {
     padding-top: 80px; /* Ajusta espaçamento superior */
   }
 }
+
