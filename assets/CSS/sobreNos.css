@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Define como o tamanho do elemento será calculado, incluindo borda e padding */
+  box-sizing: border-box;
 }
 
 /* Garantindo que o html e o body ocupem a altura total da viewport e configurando o fundo branco */
@@ -10,94 +10,94 @@ html,
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh; /* Altura mínima igual à altura da tela */
-  background-color: white; /* Cor de fundo branca */
+  min-height: 100vh;
+  background-color: white;
 }
 
 /* Adicionando uma faixa laranja no topo da página */
 body::before {
-  content: ""; /* Insere conteúdo vazio */
-  position: absolute; /* Posiciona relativo ao elemento pai mais próximo com posição definida */
-  top: 0; /* Posiciona no topo da página */
-  left: 0; /* Alinha à esquerda */
-  width: 100%; /* Ocupa toda a largura */
-  height: 33.33vh; /* Altura equivalente a 1/3 da altura da viewport */
-  background-color: #ff6b00; /* Cor laranja */
-  z-index: 0; /* Define a ordem de sobreposição */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-color: #ff6b00;
+  z-index: 0;
 }
 
 /* Adicionando uma faixa laranja na parte inferior da página */
 body::after {
   content: "";
   position: absolute;
-  bottom: 0; /* Posiciona na parte inferior */
+  bottom: -300%;
   left: 0;
   width: 100%;
-  height: 33.33vh;
+  height: 100%;
   background-color: #ff6b00;
   z-index: 0;
 }
 
 /* Estilo para o container principal */
 .container {
-  position: relative; /* Posicionamento relativo ao fluxo normal */
-  max-width: 1200px; /* Largura máxima do container */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  padding: 20px; /* Espaçamento interno */
-  background-color: white; /* Fundo branco para o conteúdo */
-  min-height: 100vh; /* Altura mínima igual à altura da viewport */
-  z-index: 1; /* Coloca o container acima das faixas laranjas */
-  border: 15px solid #595959; /* Moldura cinza */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  min-height: 100vh;
+  z-index: 1;
+  border: 5px solid #595959;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilo para o cabeçalho do menu principal */
 .header-menu-principal {
-  background-color: #003da5; /* Cor azul para o fundo */
+  background-color: #003da5;
   position: relative;
-  padding: 15px 40px; /* Espaçamento interno */
-  margin-left: -1.85%; /* Ajuste para alinhar à esquerda */
-  margin-right: -1.85%; /* Ajuste para alinhar à direita */
-  margin-top: -1.85%; /* Ajuste para alinhar ao topo */
+  padding: 15px 40px;
+  margin-left: -1.85%;
+  margin-right: -1.85%;
+  margin-top: -1.85%;
 }
 
 /* Estilo para o menu principal */
 .menu {
-  display: grid; /* Define um layout baseado em grid */
-  grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr; /* Define o tamanho relativo das colunas */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr;
   grid-template-areas: 
-    "inicio futuro logo-space sobre passagens login"; /* Nomeia áreas específicas no grid */
-  align-items: center; /* Alinha itens verticalmente ao centro */
-  gap: 20px; /* Espaçamento entre os itens */
-  max-width: 1200px; /* Largura máxima do menu */
-  margin: 0 auto; /* Centraliza o menu */
+    "inicio futuro logo-space sobre passagens login";
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 }
 
 /* Área reservada para o logo */
 .logo-wrapper {
-  grid-area: logo-space; /* Posiciona no espaço nomeado como "logo-space" */
-  height: 100%; /* Altura total do container */
-  visibility: hidden; /* Oculta o elemento */
+  grid-area: logo-space;
+  height: 100%;
+  visibility: hidden;
 }
 
 /* Container do logo com fundo branco */
 .logo-container {
-  background-color: white; /* Fundo branco */
-  padding: 15px 25px; /* Espaçamento interno */
-  border-radius: 0 0 15px 15px; /* Bordas arredondadas apenas na parte inferior */
-  position: absolute; /* Posiciona em relação ao primeiro pai posicionado */
-  top: -15px; /* Levanta o elemento */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta para o centro exato */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  z-index: 1000; /* Fica acima de outros elementos */
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .logo-container img {
-  width: 120px; /* Largura fixa */
-  height: auto; /* Altura proporcional */
-  display: block; /* Remove espaçamento indesejado */
+  width: 120px;
+  height: auto;
+  display: block;
 }
 
 /* Posicionando itens do menu em áreas específicas */
@@ -109,33 +109,262 @@ body::after {
 }
 .menu a:nth-child(5) {
   grid-area: sobre;
-  justify-self: end; /* Alinha à direita */
-  padding-right: 10px; /* Espaçamento interno à direita */
+  justify-self: end;
+  padding-right: 10px;
 }
 .menu a:nth-child(6) {
   grid-area: passagens;
-  justify-self: start; /* Alinha à esquerda */
-  padding-left: 20px; /* Espaçamento interno à esquerda */
+  justify-self: start;
+  padding-left: 20px;
 }
 .menu a:nth-child(7) {
   grid-area: login;
-  justify-self: end; /* Alinha à direita */
+  justify-self: end;
 }
 
 /* Estilo geral para os links */
 .menu a {
-  text-decoration: none; /* Remove o sublinhado */
-  color: white; /* Cor branca para o texto */
-  text-align: center; /* Centraliza o texto */
-  white-space: nowrap; /* Impede quebra de linha */
-  font-size: 16px; /* Tamanho da fonte */
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 16px;
   position: relative;
-  z-index: 1; /* Mantém o texto visível acima dos outros elementos */
+  z-index: 1;
 }
 
 /* Estilo específico para o ícone de usuário */
 .user-icon {
-  width: 25px; /* Define a largura fixa */
-  height: auto; /* Mantém a proporção */
-  vertical-align: middle; /* Alinha verticalmente ao meio */
+  width: 25px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.about-container {
+  background-color: #003399;
+  padding: 40px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  text-transform: lowercase;
+  color: #FFFFFF;
+}
+
+.about-text {
+  max-width: 700px;
+}
+
+.about-text p {
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #FFFFFF;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+
+.missao-section {
+    background-color: #FF6600;
+    padding: 20px;
+    position: relative;
+    margin-top: 60px;
+    min-height: 100vh;
+    width: 95vw;
+    margin-left: calc(-50vw + 50%); /* Ajustado para centralizar */
+    right: -2.5vw; /* Compensação para centralizar perfeitamente */
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Lombada no topo */
+.missao-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Resto do código permanece igual */
+.missao-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+}
+.missao-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+}
+
+.missao-title {
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+
+.missao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.missao-item {
+  color: #FFFFFF;
+}
+
+.missao-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.missao-item p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+hr {
+  color: white;
+}
+
+.diagonal-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.diagonal-line {
+  position: absolute;
+  width: 1px;
+  height: 150%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+}
+
+.line1 { left: 25%; }
+.line2 { left: 50%; }
+.line3 { left: 75%; }
+
+.desenvolvedores-section {
+  background-color: #003399;
+  padding: 60px 40px;
+  position: relative;
+}
+
+.desenvolvedores-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.desenvolvedores-title {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  font-style: italic;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.desenvolvedores-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dev-card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 10px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.dev-card:nth-child(odd) {
+  transform: translateY(30px);
+}
+
+.dev-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.diagonal-line-dev {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+}
+
+.line-dev1 {
+  left: 30%;
+  top: 0;
+}
+
+.line-dev2 {
+  right: 30%;
+  top: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .desenvolvedores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .desenvolvedores-title {
+    font-size: 2rem;
+  }
+
+  .dev-card:nth-child(odd) {
+    transform: translateY(15px);
+  }
+
+  .missao-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .missao-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .desenvolvedores-section {
+    padding: 40px 20px;
+  }
+
+  .desenvolvedores-grid {
+    grid-template-columns: 1fr;
+  }
 }
