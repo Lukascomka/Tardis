@@ -177,9 +177,8 @@ h1 {
     position: relative;
     margin-top: 60px;
     min-height: 100vh;
-    width: 95vw;
-    margin-left: calc(-50vw + 50%); /* Ajustado para centralizar */
-    right: -2.5vw; /* Compensação para centralizar perfeitamente */
+    width: 85vw; /* Reduzido para 85vw para diminuir a largura horizontalmente */
+    margin-left: calc(-42.5vw + 50%); /* Ajustado para manter centralizado com a nova largura */
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -200,14 +199,20 @@ h1 {
     box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* Resto do código permanece igual */
-.missao-content {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    padding: 40px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .missao-content {
     max-width: 800px;
     margin: 0 auto;
