@@ -4,6 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+h3 {
+  font-family: "Karla", sans-serif;
+  font-weight: 700; /* Aumentamos o peso da fonte para 700 (bold) */
+  font-style: normal;
+  font-size: 6rem; /* Aumentamos o tamanho da fonte para 6 rem */
+  width: 100%;
+  padding-top: 10px;
+}
+.p {
+  font-family: "Karla", sans-serif;
+  font-weight: 300; /* For light version */
+  font-style: italic;
+  font-size: 50px;
+  width: 100%;
+  
+}
 
 /* Garantindo que o html e o body ocupem a altura total da viewport e configurando o fundo branco */
 html,
@@ -41,7 +57,8 @@ body::after {
 /* Estilo para o container principal */
 .container {
   position: relative;
-  max-width: 1200px;
+  width: 100%; /* Alterado de max-width para width */
+  max-width: 1200px; /* Mantém o limite máximo de largura */
   margin: 0 auto;
   padding: 20px;
   background-color: white;
@@ -49,6 +66,7 @@ body::after {
   z-index: 1;
   border: 5px solid #595959;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
 }
 
 /* Estilo para o cabeçalho do menu principal */
@@ -65,8 +83,7 @@ body::after {
 .menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr;
-  grid-template-areas: 
-    "inicio futuro logo-space sobre passagens login";
+  grid-template-areas: "inicio futuro logo-space sobre passagens login";
   align-items: center;
   gap: 20px;
   max-width: 1200px;
@@ -143,6 +160,8 @@ body::after {
 .about-container {
   background-color: #003399;
   padding: 40px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .about-content {
@@ -150,12 +169,12 @@ body::after {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-bottom: 2.5rem;
-  text-transform: lowercase;
-  color: #FFFFFF;
+.h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+
+  color: #fff;
+  padding-bottom: 25px;
 }
 
 .about-text {
@@ -164,68 +183,47 @@ h1 {
 
 .about-text p {
   margin-bottom: 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.8;
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: 0.3px;
   font-weight: 300;
 }
 
 .missao-section {
-    background-color: #FF6600;
-    padding: 20px;
-    position: relative;
-    margin-top: 60px;
-    min-height: 100vh;
-    width: 85vw; /* Reduzido para 85vw para diminuir a largura horizontalmente */
-    margin-left: calc(-42.5vw + 50%); /* Ajustado para manter centralizado com a nova largura */
-    display: flex;
-    align-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  background-color: #ff6600;
+  padding: 20px;
+  position: relative;
+  margin-top: 60px;
+  margin-left: -40px;
+  margin-right: -40px;
+  width: calc(100% + 80px);
+  min-height: 100vh;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
-
-/* Lombada no topo */
-.missao-section::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 30px;
-    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
-    box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .missao-content {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-    padding: 40px;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  padding: 40px;
 }
 
 .missao-title {
-  font-size: 2rem;
-  color: #FFFFFF;
+  
+  font-family: 'Karla', sans-serif;
+  color: #ffffff;
   margin-bottom: 40px;
-  font-weight: 500;
+  width: 100%;
+   font-size: 4.5rem;
+  font-weight: 700;
+ padding-left: 90px; 
+
 }
 
 .missao-grid {
@@ -235,50 +233,28 @@ h1 {
 }
 
 .missao-item {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .missao-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  font-weight: 500;
+  font-family: "Karla", sans-serif;
+  font-weight: 700; /* Aumentamos o peso da fonte para 700 (bold) */
+  font-style: normal;
+  font-size: 2.5rem; /* Aumentamos o tamanho da fonte para 6 rem */
+  width: 100%;
+  padding-top: 10px;
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+  line-height: 1.2; /* Ajusta o espaçamento interno do texto */
 }
 
 .missao-item p {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.2;
+
 }
 
-hr {
-  color: white;
-}
 
-.diagonal-lines {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
 
-.diagonal-line {
-  position: absolute;
-  width: 1px;
-  height: 150%;
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: rotate(45deg);
-}
-
-.line1 { left: 25%; }
-.line2 { left: 50%; }
-.line3 { left: 75%; }
-
-.desenvolvedores-section {
-  background-color: #003399;
-  padding: 60px 40px;
-  position: relative;
-}
 
 .desenvolvedores-content {
   max-width: 800px;
@@ -287,11 +263,13 @@ hr {
 }
 
 .desenvolvedores-title {
-  font-size: 2.5rem;
-  color: #FFFFFF;
+  font-size: 5.5rem;
+  color: #ffffff;
   font-style: italic;
   margin-bottom: 50px;
-  font-weight: 300;
+  font-weight: 800;
+  margin-top: 50px;
+  font-family: 'Karla', sans-serif;
 }
 
 .desenvolvedores-grid {
@@ -304,7 +282,7 @@ hr {
 }
 
 .dev-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
   transform: translateY(0);
@@ -372,4 +350,110 @@ hr {
   .desenvolvedores-grid {
     grid-template-columns: 1fr;
   }
+}
+
+hr {
+  width: 100%;
+  color: white;
+}
+
+.diagonal-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.diagonal-line {
+  position: absolute;
+  width: 1px;
+  height: 150%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: rotate(45deg);
+}
+
+.line1 {
+  left: 25%;
+}
+.line2 {
+  left: 50%;
+}
+.line3 {
+  left: 75%;
+}
+
+
+
+
+
+.footer-menu-principal {
+    background-color: #003da5;
+    position: relative;
+    padding: 15px 40px;
+    margin-left: -1.85%;
+    margin-right: -1.85%;
+    margin-bottom: -1.85%;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container img {
+    max-height: 80px; 
+    max-width: 150px; 
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    color: white;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-menu {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
 }
