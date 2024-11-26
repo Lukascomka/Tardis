@@ -44,13 +44,13 @@ var swiper = new Swiper(".mySwiper", {
 	});
   });
   
-  document.getElementById("btn-projeto").addEventListener("click", () => {
-	window.location.href = "projetoFuturo.html";
-  });
+//   document.getElementById("btn-projeto").addEventListener("click", () => {
+// 	window.location.href = "projetoFuturo.html";
+//   });
   
-  document.getElementById("btn-empresa").addEventListener("click", () => {
-	window.location.href = "sobreNos.html";
-  });
+//   document.getElementById("btn-empresa").addEventListener("click", () => {
+// 	window.location.href = "sobreNos.html";
+//   });
   
 
 

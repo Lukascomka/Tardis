@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+button{
+  background-color: rgba(0, 0, 0, 0);
+}
+
 section {
   &.banner {
     height: 652px;
@@ -16,11 +20,12 @@ section {
     align-items: center;
 
     .title {
-      margin-left: 10px;
+      margin-left: 5%;
       font-size: 600%;
       color: white;
       transform: translateY(-120px);
       font-weight: bolder;
+
     }
   }
 
@@ -401,12 +406,13 @@ section {
             position: absolute;
             background: rgba(0, 0, 0, 0.5);
             bottom: 0;
-            padding: 16px 32px;
+            padding: 16px 30px;
             color: white;
             display: flex;
             gap: 10px;
             margin-bottom: 48px;
             border-radius: 16px;
+            font-size: 1.3rem;
 
             .price {
               font-weight: 700;
@@ -460,9 +466,9 @@ section {
       display: flex;
       .columns {
         display: flex;
-        margin: 0px 50px 0px 50px;
+        margin: 0px 50px 0px 200px;
         height: 90vh;
-        width: 100%;
+        width: 30%;
         /* border: 1px solid black; */
         position: relative;
         img {
@@ -485,6 +491,7 @@ section {
         }
 
         .text {
+          padding-top: 30%;
           position: absolute;
           margin: 10% 0 0 15%;
           p {
@@ -499,7 +506,7 @@ section {
           height: 418px;
           width: 300px;
           position: absolute;
-          margin-left: 15%;
+          margin: 0 0 15% 15%;
           /* margin-bottom: 0px; */
 
           .collapse {
