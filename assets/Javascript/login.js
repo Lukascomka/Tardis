@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function alternarEstado() {
         if (inscText.textContent === "Inscreva-se") {
             inscText.textContent = "Novo Login";
-            criarButton.textContent = "Fazer Login";
+            criarButton.textContent = "FAZER LOGIN";
             txtLogin.textContent = "CADASTRE-SE";
 
             // Oculta o checkContainer

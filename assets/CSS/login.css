@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color: #A7C7E7;
+    background-image: linear-gradient(-45deg, #ff893a, #ffb04f, #4869a3, #003DA5);
     background-attachment: fixed;
     height: 100%;
     margin: 0;
@@ -18,7 +18,7 @@ body{
     align-items: center;
 }
 
-.circulo{
+/* .circulo{
     border-radius: 50%;
     position: absolute;
     z-index: -5;
@@ -58,7 +58,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(80%, -30%);
-}
+} */
 
 .card{
     display: grid;
@@ -104,6 +104,8 @@ body{
     justify-self: center;
     align-self: center;
     font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: 2px;    
     color: #003DA5;
 }
 
@@ -116,6 +118,7 @@ body{
     position: relative; /* Para o sublinhado */
     margin: 10px;
     text-align: center; /* Centraliza o texto */
+    letter-spacing: 2px;
     color: #003DA5;
 }
 
@@ -144,6 +147,7 @@ body{
     padding: 10px 20px; /* Adiciona espaçamento interno */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
     font-size: larger; /* Aumenta o tamanho da fonte do botão */
+    letter-spacing: 2px;
     font-weight: bold; /* Define a fonte para Bold */
 }
 
@@ -155,6 +159,8 @@ body{
     justify-self: center;
     align-self: center;
     font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: 2px;
     color: #003DA5;
 }
 
@@ -188,7 +194,6 @@ body{
 
 .inputSenha {
     position: relative; /* Para posicionar a imagem dentro do input */
-    margin-bottom: 10px; /* Espaçamento inferior */
     grid-column: 2 / 5;
     grid-row: 4 / 5; 
 }
@@ -198,7 +203,7 @@ body{
     position: absolute; /* Para posicionar a imagem dentro do input */
     left: 0.5em; 
     top: 50%; /* Centraliza verticalmente */
-    transform: translateY(-75%); /* Centraliza verticalmente */
+    transform: translateY(-85%); /* Centraliza verticalmente */
     width: 2em; 
     height: 2em;
     pointer-events: none; /* Para que cliques na imagem não afetem a interação com o input */
@@ -221,7 +226,7 @@ body{
 .checkContainer {
     display: flex; /* Usando flexbox para alinhar os elementos */
     align-items: end; /* Alinha verticalmente os itens */
-    margin-top: 10px; /* Espaçamento entre o input de senha e este contêiner */
+    margin-top: 35px; /* Espaçamento entre o input de senha e este contêiner */
     grid-column: 2 / 5;
     grid-row: 4 / 5;
     position: relative; /* Para que o z-index funcione */
@@ -254,6 +259,7 @@ body{
     color: white;
     font-weight: bolder;
     font-size: medium;
+    letter-spacing: 2px;
     border: none;
     border-radius: 2em;
     cursor: pointer;
