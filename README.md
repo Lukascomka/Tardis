@@ -1,4 +1,5 @@
-# Thardis ![alt text](assets/IMG/projetoFuturo/Figma/logo.png)
+# Thardis 
+![alt text](assets/IMG/projetoFuturo/Figma/logo.png)
 
 # Este projeto faz parte do TCC do Instituto da Oportunidade Social.
 
