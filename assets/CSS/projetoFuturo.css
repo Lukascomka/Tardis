@@ -28,7 +28,7 @@ font-size: 18px;
 
 body {
 
-  font-family: "Poppins", sans-serif;
+font-family: 'Karla', sans-serif;
   background-color: #fff;
 }
 /* Navbar mobile,tablet e PC */
@@ -51,14 +51,16 @@ body {
 }
 
 /* Espaço reservado para o logo */
-.logo-wrapper {
+.logo-wrapper { 
+    /* fundo-logo2 */
     grid-area: logo-space;
     height: 100%;
     visibility: hidden;
 }
 
-/* Logo container com fundo branco */
+
 .logo-container {
+    /* fundo-logo-footer */
     background-color: white;
     padding: 15px 25px;
     border-radius: 0 0 15px 15px;
@@ -100,7 +102,7 @@ body {
 
 /* Estilo para os links */
 .menu a {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Karla', sans-serif;
 font-weight: 400; /* Regular weight */
 font-size: 18px;
 
@@ -227,17 +229,17 @@ font-size: 18px;
 /* Button styles */
 /* .custom-btn {
     transition: all 0.3s ease; /* Suaviza a transição */
-    color: #ffffff; /* Texto branco */
-    background-color: #ff6600; /* Fundo laranja */
-    border-radius: 27PX; /* Borda arredondada */
-    border: none; /* Remove a borda padrão */
-    padding: 10px 20px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito para o texto */
-    cursor: pointer; /* Ponteiro ao passar o mouse */
-    text-align: center; /* Centraliza o texto */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para um efeito sutil */
-}
+    /* /* color: #ffffff; Texto branco */
+    /* background-color: #ff6600; Fundo laranja */
+    /* border-radius: 27PX; Borda arredondada */
+    /* border: none; Remove a borda padrão */
+    /* padding: 10px 20px; Espaçamento interno */
+    /* font-size: 16px; Tamanho da fonte */
+    /* font-weight: bold; Negrito para o texto */
+    /* cursor: pointer; Ponteiro ao passar o mouse */
+    /* text-align: center; Centraliza o texto */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Sombra para um efeito sutil */ */
+/* } */
 
 .custom-btn:hover {
     background-color: #cc5200; /* Fundo laranja mais escuro ao passar o mouse */
@@ -1012,3 +1014,92 @@ font-weight: 400; /* Regular weight */
           font-size: 1.5rem;
       }
   }
+
+
+
+
+  .footer {
+ background-color: #003399;
+    position: relative;
+    padding: 0px 0px 0px 0px;
+    margin-left: 90%;
+    margin-right: 90%;
+    display: grid
+;
+    grid-template-columns: 2fr 1fr 1.5fr 8.8fr 0fr;
+    grid-template-rows: 2fr 1fr 1.5fr 8.8fr 0fr;
+    grid-template-areas: "instagram facebook x copy fundo-logo";
+    align-items: center;
+    gap: 0px;
+    min-width: 1200px;
+    margin: 0;
+    right: 0px;
+    bottom: 0px;
+    height: 60px;
+}
+
+.fundo-logo2 {
+  grid-area: fundo-logo;
+  height: 100%;
+  visibility: hidden;
+}
+
+.fundo-logo-footer {
+  background-color: white;
+  padding: 28px;
+  border-radius: 15px 15px 15px 15px;
+  position: absolute;
+  bottom: 0px;
+  left: 89.5%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.fundo-logo-footer img {
+  width: 130px;
+  height: auto;
+}
+
+.footer a:nth-child(1) {
+  grid-area: instagram;
+  padding-left: 20px;
+}
+
+.footer a:nth-child(2) {
+  grid-area: facebook;
+  padding-left: 20px;
+}
+
+.footer a:nth-child(3) {
+  grid-area: x;
+  padding-left: 20px;
+  width: 30px;
+}
+
+.footer a {
+  max-width: 20px;
+  height: auto;
+  position: relative;
+  white-space: nowrap;
+}
+
+.redes-sociais {
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+  position: absolute;
+  left: 30px;
+  z-index: 1000;
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: auto;
+  display: inline-block;
+}
+
+.copy {
+  grid-area: copy;
+  padding-top: 25px;
+padding-left: 50px;
+  color: white;
+}

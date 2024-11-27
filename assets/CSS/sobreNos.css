@@ -1,29 +1,15 @@
-/* Resetando margens e espaçamentos padrão de todos os elementos */
-* {
+
+
+/* Resetando margens e espaçamentos padrão de todos os elementos */ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-h3 {
-  font-family: "Karla", sans-serif;
-  font-weight: 700; /* Aumentamos o peso da fonte para 700 (bold) */
-  font-style: normal;
-  font-size: 6rem; /* Aumentamos o tamanho da fonte para 6 rem */
-  width: 100%;
-  padding-top: 10px;
-}
-.p {
-  font-family: "Karla", sans-serif;
-  font-weight: 300; /* For light version */
-  font-style: italic;
-  font-size: 50px;
-  width: 100%;
-  
 }
 
 /* Garantindo que o html e o body ocupem a altura total da viewport e configurando o fundo branco */
 html,
 body {
+  font-family: 'Karla', sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -46,7 +32,7 @@ body::before {
 body::after {
   content: "";
   position: absolute;
-  bottom: -300%;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -57,8 +43,8 @@ body::after {
 /* Estilo para o container principal */
 .container {
   position: relative;
-  width: 100%; /* Alterado de max-width para width */
-  max-width: 1200px; /* Mantém o limite máximo de largura */
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background-color: white;
@@ -66,7 +52,7 @@ body::after {
   z-index: 1;
   border: 5px solid #595959;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+  box-sizing: border-box;
 }
 
 /* Estilo para o cabeçalho do menu principal */
@@ -172,7 +158,6 @@ body::after {
 .h1 {
   font-size: 4.5rem;
   font-weight: 700;
-
   color: #fff;
   padding-bottom: 25px;
 }
@@ -215,15 +200,13 @@ body::after {
 }
 
 .missao-title {
-  
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   color: #ffffff;
   margin-bottom: 40px;
   width: 100%;
-   font-size: 4.5rem;
+  font-size: 4.5rem;
   font-weight: 700;
- padding-left: 90px; 
-
+  padding-left: 90px;
 }
 
 .missao-grid {
@@ -238,23 +221,19 @@ body::after {
 
 .missao-item h3 {
   font-family: "Karla", sans-serif;
-  font-weight: 700; /* Aumentamos o peso da fonte para 700 (bold) */
+  font-weight: 700;
   font-style: normal;
-  font-size: 2.5rem; /* Aumentamos o tamanho da fonte para 6 rem */
+  font-size: 2.5rem;
   width: 100%;
   padding-top: 10px;
-  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
-  line-height: 1.2; /* Ajusta o espaçamento interno do texto */
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .missao-item p {
   font-size: 20px;
   line-height: 1.2;
-
 }
-
-
-
 
 .desenvolvedores-content {
   max-width: 800px;
@@ -269,7 +248,7 @@ body::after {
   margin-bottom: 50px;
   font-weight: 800;
   margin-top: 50px;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
 }
 
 .desenvolvedores-grid {
@@ -384,76 +363,87 @@ hr {
   left: 75%;
 }
 
-
-
-
-
-.footer-menu-principal {
-    background-color: #003da5;
-    position: relative;
-    padding: 15px 40px;
-    margin-left: -1.85%;
-    margin-right: -1.85%;
-    margin-bottom: -1.85%;
+.footer {
+  background-color: #003399;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  margin-left: 85%;
+  margin-right: 85%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 8.8fr 0fr;
+  grid-template-rows: 2fr 1fr 1.5fr 8.8fr 0fr;
+  grid-template-areas: "instagram facebook x copy fundo-logo";
+  align-items: center;
+  gap: 0px;
+  width: 1191px;
+  margin: 0;
+  right: 20px;
+  bottom: -20px;
+  height: 73px;
 }
 
-.footer-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+.fundo-logo2 {
+  grid-area: fundo-logo;
+  height: 100%;
+  visibility: hidden;
 }
 
-.logo-container img {
-    max-height: 80px; 
-    max-width: 150px; 
+.fundo-logo-footer {
+  background-color: white;
+  padding: 28px;
+  border-radius: 15px 15px 15px 15px;
+  position: absolute;
+  bottom: -5px;
+  left: 89.5%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.fundo-logo-footer img {
+  width: 130px;
+  height: auto;
 }
 
-.social-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
+.footer a:nth-child(1) {
+  grid-area: instagram;
+  padding-left: 20px;
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
+.footer a:nth-child(2) {
+  grid-area: facebook;
+  padding-left: 20px;
 }
 
-.copyright {
-    color: white;
-    font-size: 0.8rem;
-    text-align: right;
+.footer a:nth-child(3) {
+  grid-area: x;
+  padding-left: 20px;
+  width: 30px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-menu {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
-    
-    .social-icon {
-        width: 25px;
-        height: 25px;
-    }
+.footer a {
+  max-width: 20px;
+  height: auto;
+  position: relative;
+  white-space: nowrap;
 }
 
-@media (max-width: 480px) {
-    .social-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
+.redes-sociais {
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+  position: absolute;
+  bottom: 7px;
+  left: 50px;
+  z-index: 1000;
+}
+
+.redes-sociais img {
+  width: 50px;
+  height: auto;
+  display: inline-block;
+}
+
+.copy {
+  grid-area: copy;
+  padding: 0 px;
+  color: white;
 }
