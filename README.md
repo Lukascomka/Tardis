@@ -1,5 +1,6 @@
 # Thardis ! 
-[Logo Thardis](<assets/IMG/projetoFuturo/logo thardiss.png>)
+<img src="<assets/IMG/projetoFuturo/logo thardiss.png>" alt="Logo Thardis" height="100"/>
+
 
 # Este projeto faz parte do TCC do Instituto da Oportunidade Social.
 
