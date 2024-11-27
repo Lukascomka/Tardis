@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-image: linear-gradient(-45deg, #ff893a, #ffb04f, #4869a3, #003DA5);
+    background-color: white;
     background-attachment: fixed;
     height: 100%;
     margin: 0;
@@ -17,6 +17,29 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.faixa-laranja {
+    background-color: #ff6600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, -20% 20%);
+    z-index: -5;
+}
+
+.faixa-azul {
+    background-color: #003DA5;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    height: 458.5px; 
+    clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
+    z-index: -5;
+}
+
 
 /* .circulo{
     border-radius: 50%;
@@ -90,12 +113,17 @@ body{
  /* grid card1 */
 
 #logo{
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
     justify-self: center; /* Centraliza horizontalmente */
     align-self: center; /* Centraliza verticalmente */
     width: 80%; /* Ajusta a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
+}
+
+#link{
+    justify-self: center; /* Centraliza horizontalmente */
+    align-self: center; /* Centraliza verticalmente */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
 
 #bemVindo{
@@ -294,7 +322,7 @@ body{
 
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
-    .circulo {
+    /* .circulo {
         width: 15em;
         height: 15em;
     }
@@ -321,7 +349,7 @@ body{
         width: 12em;
         height: 12em;
         transform: translate(50%, -30%);
-    }
+    } */
 
     .card {
         height: 20em;
@@ -393,7 +421,15 @@ body{
     font-size: 10px; /* Tamanho da fonte do link */
     }
 
-    #cadeado {
-        transform: translateY(-65%); /* Centraliza verticalmente */
+    #criar{
+        font-size: 12px;
+    }
+
+    #cadeado, #imgPessoa {
+        transform: translateY(-75%); /* Centraliza verticalmente */
+    }
+
+    .faixa-azul {
+        height: 585px; 
     }
 }

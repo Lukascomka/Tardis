@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const txtLogin = document.getElementById("txtLogin");
     const checkContainer = document.querySelector(".checkContainer");
     const entrarButton = document.getElementById("entrar");
-    const setasButton = document.getElementById("setas"); // Adicionando o botão "setas"
+    const setasButton = document.getElementById("setas");
 
     // Função para alternar entre os estados
     function alternarEstado() {
