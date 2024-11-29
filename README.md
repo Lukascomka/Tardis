@@ -1,18 +1,63 @@
-# Thardis 
-![alt text](assets/IMG/projetoFuturo/Figma/logo.png)
+# Thardis  ![alt text](assets/IMG/projetoFuturo/Figma/logo.png)
 
-# Este projeto faz parte do TCC do Instituto da Oportunidade Social.
+# Projeto TCC - Instituto da Oportunidade Social
 
-### O tema do projeto deve abordar algumas das bandeiras das ODS *(Objetivos de Desenvolvimento Sustentável)*. 
-### O objetivo central do nosso projeto é oferecer intercâmbio gratuito para todas as crianças de escola pública e de baixa renda, que se enquadrem dentro dos requisitos do projeto.
+## 🌍 Sobre o Projeto
 
-### O projeto visa proporcionar para crianças de baixa renda que talvez nunca sonhariam em viajar para fora do país, devido a sua realidade econômica.  10% de todas as vendas de passagens aéreas que realizarmos no site, será destinada para o financiamento  deste projeto. Além disso, buscamos diariamente parcerias privadas afim de garantir um intercâmbio de qualidade para todos os jovens. 
+Este projeto faz parte do Trabalho de Conclusão de Curso do **Instituto da Oportunidade Social (IOS)** e tem como objetivo central abordar algumas das bandeiras das **ODS (Objetivos de Desenvolvimento Sustentável)**.  
 
-### A propósta do IOS é fornecer aos alunos uma vivência real de um ambiente de desenvolvimento. Onde somos encorajados a desenvolver toda parte de documentação do projeto tais como: LEVANTAMENTO DE REQUISITOS, ANALISE FOFA, MISSÃO, VISÃO E VALORES, PÚBLICO ALVO E ETC. Além da parte de documentação, devemos utilizar metodologia Ágeis no desenvolvimento (scrum), protótipagem de layout (figma). Aplicando todo conhecinento adquirido em sala de aula como HTML5, CSS, Git e Github, JavaScript e Bootstrap. Ficando livre para implementar o projeto com mais tecnologías do jeito que achar melhor.  
+### 🎯 Objetivo Central
+O projeto tem como missão oferecer **intercâmbio gratuito** para crianças de escolas públicas e de baixa renda, que atendam aos requisitos estabelecidos. Buscamos proporcionar oportunidades para jovens que, devido à sua realidade econômica, talvez nunca sonhariam em viajar para o exterior.  
 
-<!-- # ENVOLVIDOS NO PROJETO :  -->
+### 💡 Nosso Propósito
+- **10% de todas as vendas** de passagens aéreas realizadas no site serão destinadas ao financiamento deste projeto.  
+- Buscamos **parcerias privadas** para garantir intercâmbios de qualidade para todos os jovens participantes.  
 
+---
 
-# Protótipo do figma 
+## 📋 Processo de Desenvolvimento no IOS
 
-![Página Projeto Futuro Brilhante ](assets/IMG/projetoFuturo/Figma/Projeto_futuro_brilhante.png) ![Pagina sobre](assets/IMG/projetoFuturo/Figma/SobreNos.png) ![Home Page](assets/IMG/projetoFuturo/Figma/HomePage.png) ![Página de Login e Cadastre-se](assets/IMG/projetoFuturo/Figma/Login.png)
+O Instituto da Oportunidade Social incentiva os alunos a vivenciarem um ambiente de desenvolvimento real. Somos desafiados a criar um projeto completo, incluindo:  
+- **Documentação do Projeto:**  
+  - Levantamento de Requisitos  
+  - Análise SWOT (FOFA)  
+  - Missão, Visão e Valores  
+  - Definição do Público-Alvo  
+  - E muito mais.  
+- **Metodologias Ágeis:**  
+  - Uso de Scrum para o gerenciamento do projeto.  
+- **Protótipos e Layouts:**  
+  - Desenvolvimento no Figma para prototipagem.  
+- **Tecnologias Utilizadas:**  
+  - HTML5, CSS3, Git, GitHub, JavaScript e Bootstrap.  
+  - Liberdade para implementar com tecnologias adicionais conforme a necessidade.  
+
+---
+
+## 🎨 Protótipo no Figma
+
+### Tela Inicial do Protótipo
+![Home Page](assets/IMG/projetoFuturo/Figma/HomePage.png)
+
+### Tela do Projeto
+![Página Projeto Futuro Brilhante ](assets/IMG/projetoFuturo/Figma/Projeto_futuro_brilhante.png)
+
+### Tela de Sobre Nós
+![Pagina sobre](assets/IMG/projetoFuturo/Figma/SobreNos.png)
+
+### Tela de Login
+![Página de Login e Cadastre-se](assets/IMG/projetoFuturo/Figma/Login.png)
+---
+<!-- ## 👥 Equipe Envolvida
+
+- **Integrante 1**  
+  ![Foto do Integrante 1](./assets/integrante1.png)  
+- **Integrante 2**  
+  ![Foto do Integrante 2](./assets/integrante2.png)  
+- **Integrante 3**  
+  ![Foto do Integrante 3](./assets/integrante3.png)  
+- **Integrante 4**  
+  ![Foto do Integrante 4](./assets/integrante4.png)  
+
+--- -->
+
