@@ -321,7 +321,7 @@ body{
 }
 
 /* Media Queries para Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 412px) {
     /* .circulo {
         width: 15em;
         height: 15em;
@@ -352,14 +352,15 @@ body{
     } */
 
     .card {
+        border-radius: 30px;
         height: 20em;
-        width: 90%; /* Ajusta para ocupar 90% da largura da tela */
+        width: 80%; /* Ajusta para ocupar 80% da largura da tela */
         max-width: 400px; /* Limita a largura máxima */
     }
 
     .card1 {
         height: 20em;
-        width: 20%; /* Ajusta para ocupar 80% da largura da tela */
+        width: 20%; /* Ajusta para ocupar 20% da largura da tela */
         max-width: 300px; /* Limita a largura máxima */
     }
 

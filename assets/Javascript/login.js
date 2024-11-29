@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Função para alternar entre os estados
     function alternarEstado() {
-        if (inscText.textContent === "Inscreva-se") {
+        if (inscText.textContent === "Cadastre-se") {
             inscText.textContent = "Novo Login";
             criarButton.textContent = "FAZER LOGIN";
             txtLogin.textContent = "CADASTRE-SE";
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Altera o texto do botão "ENTRAR" para "CADASTRAR"
             entrarButton.textContent = "CADASTRAR";
         } else {
-            inscText.textContent = "Inscreva-se";
+            inscText.textContent = "Cadastre-se";
             criarButton.textContent = "CRIAR CONTA";
             txtLogin.textContent = "FAÇA LOGIN";
 
