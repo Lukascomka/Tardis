@@ -1,4 +1,4 @@
-# Thardis  ![alt text](assets/IMG/projetoFuturo/Figma/logo.png)
+# Thardis  ![alt text](assets/IMG/Figma/logo.png)
 
 # Projeto TCC - Instituto da Oportunidade Social
 
@@ -37,27 +37,27 @@ O Instituto da Oportunidade Social incentiva os alunos a vivenciarem um ambiente
 ## 🎨 Protótipo no Figma
 
 ### Tela Inicial do Protótipo
-![Home Page](assets/IMG/projetoFuturo/Figma/HomePage.png)
+![Home Page](assets/IMG/Figma/HomePage.png)
 
 ### Tela do Projeto
-![Página Projeto Futuro Brilhante ](assets/IMG/projetoFuturo/Figma/Projeto_futuro_brilhante.png)
+![Página Projeto Futuro Brilhante ](assets/IMG/Figma/Projeto_futuro_brilhante.png)
 
 ### Tela de Sobre Nós
-![Pagina sobre](assets/IMG/projetoFuturo/Figma/SobreNos.png)
+![Pagina sobre](assets/IMG/Figma/SobreNos.png)
 
 ### Tela de Login
-![Página de Login e Cadastre-se](assets/IMG/projetoFuturo/Figma/Login.png)
+![Página de Login e Cadastre-se](assets/IMG/Figma/Login.png)
 ---
-<!-- ## 👥 Equipe Envolvida
+## 👥 Equipe Envolvida
 
 - **Integrante 1**  
-  ![Foto do Integrante 1](./assets/integrante1.png)  
+  ![!\[Caio \](./assets/integrante1.png)  ](assets/IMG/sobreNos-IMG/Caio.jpeg)
 - **Integrante 2**  
-  ![Foto do Integrante 2](./assets/integrante2.png)  
-- **Integrante 3**  
+ ![ !\[Nicolas\](./assets/integrante2.png)  ](assets/IMG/sobreNos-IMG/nicolas.jpeg)
+<!-- - **Integrante 3**  
   ![Foto do Integrante 3](./assets/integrante3.png)  
 - **Integrante 4**  
-  ![Foto do Integrante 4](./assets/integrante4.png)  
+  ![Foto do Integrante 4](./assets/integrante4.png)   -->
 
 --- -->
 
