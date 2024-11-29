@@ -1,12 +1,9 @@
-
-
-/* Resetando margens e espaçamentos padrão de todos os elementos */ * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Garantindo que o html e o body ocupem a altura total da viewport e configurando o fundo branco */
 html,
 body {
   font-family: 'Karla', sans-serif;
@@ -16,7 +13,6 @@ body {
   background-color: white;
 }
 
-/* Adicionando uma faixa laranja no topo da página */
 body::before {
   content: "";
   position: absolute;
@@ -28,7 +24,6 @@ body::before {
   z-index: 0;
 }
 
-/* Adicionando uma faixa laranja na parte inferior da página */
 body::after {
   content: "";
   position: absolute;
@@ -40,11 +35,10 @@ body::after {
   z-index: 0;
 }
 
-/* Estilo para o container principal */
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1201px;
   margin: 0 auto;
   padding: 20px;
   background-color: white;
@@ -53,9 +47,11 @@ body::after {
   border: 5px solid #595959;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Estilo para o cabeçalho do menu principal */
 .header-menu-principal {
   background-color: #003da5;
   position: relative;
@@ -65,7 +61,6 @@ body::after {
   margin-top: -1.85%;
 }
 
-/* Estilo para o menu principal */
 .menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr;
@@ -77,14 +72,12 @@ body::after {
   position: relative;
 }
 
-/* Área reservada para o logo */
 .logo-wrapper {
   grid-area: logo-space;
   height: 100%;
   visibility: hidden;
 }
 
-/* Container do logo com fundo branco */
 .logo-container {
   background-color: white;
   padding: 15px 25px;
@@ -103,13 +96,8 @@ body::after {
   display: block;
 }
 
-/* Posicionando itens do menu em áreas específicas */
-.menu a:nth-child(1) {
-  grid-area: inicio;
-}
-.menu a:nth-child(2) {
-  grid-area: futuro;
-}
+.menu a:nth-child(1) { grid-area: inicio; }
+.menu a:nth-child(2) { grid-area: futuro; }
 .menu a:nth-child(5) {
   grid-area: sobre;
   justify-self: end;
@@ -125,7 +113,6 @@ body::after {
   justify-self: end;
 }
 
-/* Estilo geral para os links */
 .menu a {
   text-decoration: none;
   color: white;
@@ -136,7 +123,6 @@ body::after {
   z-index: 1;
 }
 
-/* Estilo específico para o ícone de usuário */
 .user-icon {
   width: 25px;
   height: auto;
@@ -148,6 +134,7 @@ body::after {
   padding: 40px;
   margin-left: -20px;
   margin-right: -20px;
+  margin-bottom: 0;
 }
 
 .about-content {
@@ -179,9 +166,10 @@ body::after {
   background-color: #ff6600;
   padding: 20px;
   position: relative;
-  margin-top: 60px;
+  margin-top: 0;
   margin-left: -40px;
   margin-right: -40px;
+  margin-bottom: 0;
   width: calc(100% + 80px);
   min-height: 100vh;
   display: flex;
@@ -235,47 +223,62 @@ body::after {
   line-height: 1.2;
 }
 
-.desenvolvedores-content {
-  max-width: 800px;
-  margin: 0 auto;
+.desenvolvedores-section {
+  background-color: #003399;
+  padding: 40px;
   position: relative;
-}
-
-.desenvolvedores-title {
-  font-size: 5.5rem;
-  color: #ffffff;
-  font-style: italic;
-  margin-bottom: 50px;
-  font-weight: 800;
-  margin-top: 50px;
-  font-family: "Karla", sans-serif;
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .desenvolvedores-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 40px;
   padding: 20px 0;
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.dev-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 10px;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
+.dev-image-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
-.dev-card:nth-child(odd) {
-  transform: translateY(30px);
-}
-
-.dev-card img {
+.dev-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dev-name {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dev-bio {
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.desenvolvedores-title {
+  font-size: 7rem;
+  color: #ffffff;
+  font-style: italic;
+  margin-bottom: 50px;
+  font-weight: 900;
+  margin-top: 50px;
+  font-family: "Karla", sans-serif;
+  text-align: center;
 }
 
 .diagonal-line-dev {
@@ -286,100 +289,23 @@ body::after {
   transform: rotate(45deg);
 }
 
-.line-dev1 {
-  left: 30%;
-  top: 0;
-}
-
-.line-dev2 {
-  right: 30%;
-  top: 0;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .desenvolvedores-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .desenvolvedores-title {
-    font-size: 2rem;
-  }
-
-  .dev-card:nth-child(odd) {
-    transform: translateY(15px);
-  }
-
-  .missao-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .missao-content {
-    padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .desenvolvedores-section {
-    padding: 40px 20px;
-  }
-
-  .desenvolvedores-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-hr {
-  width: 100%;
-  color: white;
-}
-
-.diagonal-lines {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.diagonal-line {
-  position: absolute;
-  width: 1px;
-  height: 150%;
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: rotate(45deg);
-}
-
-.line1 {
-  left: 25%;
-}
-.line2 {
-  left: 50%;
-}
-.line3 {
-  left: 75%;
-}
+.line-dev1 { left: 30%; }
+.line-dev2 { right: 30%; }
 
 .footer {
   background-color: #003399;
   position: relative;
-  padding: 0px 0px 0px 0px;
-  margin-left: 85%;
-  margin-right: 85%;
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr 8.8fr 0fr;
   grid-template-rows: 2fr 1fr 1.5fr 8.8fr 0fr;
   grid-template-areas: "instagram facebook x copy fundo-logo";
-  align-items: center;
-  gap: 0px;
+  align-items: start;
+  gap: 0;
   width: 1191px;
-  margin: 0;
+  height: 61px;
   right: 20px;
-  bottom: -20px;
-  height: 73px;
+  bottom: 0px;
+  top: 0px;
 }
 
 .fundo-logo2 {
@@ -391,7 +317,7 @@ hr {
 .fundo-logo-footer {
   background-color: white;
   padding: 28px;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px;
   position: absolute;
   bottom: -5px;
   left: 89.5%;
@@ -429,7 +355,7 @@ hr {
 
 .redes-sociais {
   align-items: center;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   position: absolute;
   bottom: 7px;
   left: 50px;
@@ -444,6 +370,15 @@ hr {
 
 .copy {
   grid-area: copy;
-  padding: 0 px;
+  padding: 0;
   color: white;
+}
+
+.diagonal-lines {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
