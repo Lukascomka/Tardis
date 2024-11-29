@@ -51,7 +51,7 @@ O Instituto da Oportunidade Social incentiva os alunos a vivenciarem um ambiente
 ## 👥 Equipe Envolvida
 
 - **Caio**  
-  ![!\[Caio \](./assets/integrante1.png)  ](assets/IMG/sobreNos-IMG/Caio.jpeg){ width=300 height=200 }
+  ![!\[Caio \](./assets/integrante1.png)  ](assets/IMG/sobreNos-IMG/Caio.jpeg{ width=300 height=200 })
 - **Nicolas**  
  ![ !\[Nicolas\](./assets/integrante2.png)  ](assets/IMG/sobreNos-IMG/nicolas.jpeg){ width=300 height=200 }
 <!-- - **Integrante 3**  
