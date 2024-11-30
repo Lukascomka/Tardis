@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("click", function(event) {
         if (event.target === pop) {
             fecharPop();
-            setasButton.classList.remove("setas-desativado"); // Remove a classe ao fechar o modal
+            setasButton.classList.remove("setas-desativado"); // Remove a classe ao fechar o popUp
         }
     })
 
