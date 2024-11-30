@@ -12,39 +12,35 @@
 <body>
     <div class="faixa-azul"></div>
     <div class="faixa-laranja"></div>
-    <div> <!-- Background -->
-        <div class="circulo circ1"></div>
-        <div class="circulo circ2"></div>
-        <div class="circulo circ3"></div>
-        <div class="circulo circ4"></div>
-    </div>
-    <div class="card1"> <!-- retangulo canto -->
-        <a href="" id="link"><img src="./assets/IMG/logo.png" alt="" id="logo"></a>
-        <p id="bemVindo">BEM VINDO</p>
-        <p id="insc">Cadastre-se</p>
-        <button id="criar">
-            CRIAR CONTA
+    <div id="divisor">
+        <div class="card1"> <!-- retangulo canto -->
+            <a href="" id="link"><img src="./assets/IMG/logo.png" alt="" id="logo"></a>
+            <p id="bemVindo">BEM VINDO</p>
+            <p id="insc">Cadastre-se</p>
+            <button id="criar">
+                CRIAR CONTA
+            </button>
+        </div>
+        <button id="setas">
+            <img src="" alt="">
         </button>
-    </div>
-    <button id="setas">
-        <img src="" alt="">
-    </button>
-    <div class="card"> <!-- Retângulo login -->
-        <p id="txtLogin">FAÇA LOGIN</p>
-        <div class="inputUsuario">
-            <img id="imgPessoa" src="./assets/IMG/usuario.png" alt="">
-            <input id="usuario" placeholder="USUÁRIO" type="text" name="">
+        <div class="card"> <!-- Retângulo login -->
+            <p id="txtLogin">FAÇA LOGIN</p>
+            <div class="inputUsuario">
+                <img id="imgPessoa" src="./assets/IMG/usuario.png" alt="">
+                <input id="usuario" placeholder="USUÁRIO" type="text" name="">
+            </div>
+            <div class="inputSenha">
+                <img id="cadeado" src="./assets/IMG/cadeado.png" alt="">
+                <input id="senha" placeholder="SENHA" type="password" name="">
+            </div>
+            <div class="checkContainer">
+                <input type="checkbox" id="lembrar" name="lembrar">
+                <label for="lembrar">Lembrar senha</label>
+                <a href="#" class="esqueceu">Esqueceu a senha?</a>
+            </div>
+            <button id="entrar">ENTRAR</button>
         </div>
-        <div class="inputSenha">
-            <img id="cadeado" src="./assets/IMG/cadeado.png" alt="">
-            <input id="senha" placeholder="SENHA" type="password" name="">
-        </div>
-        <div class="checkContainer">
-            <input type="checkbox" id="lembrar" name="lembrar">
-            <label for="lembrar">Lembrar senha</label>
-            <a href="#" class="esqueceu">Esqueceu a senha?</a>
-        </div>
-        <button id="entrar">ENTRAR</button>
     </div>
 
     <script src="./assets/Javascript/login.js"></script>
