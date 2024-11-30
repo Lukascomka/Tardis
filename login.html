@@ -14,7 +14,9 @@
     <div class="faixa-laranja"></div>
     <div id="divisor">
         <div class="card1"> <!-- retangulo canto -->
-            <a href="" id="link"><img src="./assets/IMG/logo.png" alt="" id="logo"></a>
+            <a href="" id="link">
+                <img src="./assets/IMG/logo.png" alt="" id="logo">
+            </a>
             <p id="bemVindo">BEM VINDO</p>
             <p id="insc">Cadastre-se</p>
             <button id="criar">
@@ -28,11 +30,11 @@
             <p id="txtLogin">FAÇA LOGIN</p>
             <div class="inputUsuario">
                 <img id="imgPessoa" src="./assets/IMG/usuario.png" alt="">
-                <input id="usuario" placeholder="USUÁRIO" type="text" name="">
+                <input id="usuario" placeholder="USUÁRIO" type="text" required>
             </div>
             <div class="inputSenha">
                 <img id="cadeado" src="./assets/IMG/cadeado.png" alt="">
-                <input id="senha" placeholder="SENHA" type="password" name="">
+                <input id="senha" placeholder="SENHA" type="password" required>
             </div>
             <div class="checkContainer">
                 <input type="checkbox" id="lembrar" name="lembrar">
@@ -40,6 +42,14 @@
                 <a href="#" class="esqueceu">Esqueceu a senha?</a>
             </div>
             <button id="entrar">ENTRAR</button>
+        </div>
+    </div>
+
+    <!-- Pop-up -->
+    <div id="popUp" class="pop">
+        <div class="contentPop">
+            <span class="fechar">&times;</span>
+            <p>Usuário cadastrado com sucesso!</p>
         </div>
     </div>
 

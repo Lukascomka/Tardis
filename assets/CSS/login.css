@@ -71,9 +71,7 @@ body{
  /* grid card1 */
 
 #logo{
-    justify-self: center; /* Centraliza horizontalmente */
-    align-self: center; /* Centraliza verticalmente */
-    width: 80%; /* Ajusta a largura da imagem */
+    width: 100%; /* Ajusta a largura da imagem */
     height: auto; /* Mantém a proporção da imagem */
 }
 
@@ -209,6 +207,36 @@ body{
     z-index: 2; /* Coloca o campo de senha acima do ícone */
 }
 
+#inputEmail{
+    position: relative; /* Para posicionar a imagem dentro do input */
+    grid-column: 2 / 5;
+    grid-row: 5 / 6;
+}
+
+#carta{
+    position: absolute; /* Para posicionar a imagem dentro do input */
+    left: 0.7em; 
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-100%); /* Centraliza verticalmente */
+    width: 1.6em; 
+    height: 1.6em;
+    pointer-events: none; /* Para que cliques na imagem não afetem a interação com o input */
+    z-index: 1;
+}
+
+#email{
+    padding-left: 40px; /* Espaço para a imagem do cadeado */
+    width: 100%; /* Faz o input ocupar toda a largura do container */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    border-radius: 15px; /* Arredondando as bordas */
+    border: 1px solid rgba(0, 61, 165, 0.5); /* Borda com transparência */
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) -400%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(10px); /* Efeito de desfoque de fundo */
+    height: 40px; /* Altura do input */
+    font-size: 16px; /* Tamanho da fonte */
+    z-index: 2; /* Coloca o campo de senha acima do ícone */
+}
+
 .checkContainer {
     display: flex; /* Usando flexbox para alinhar os elementos */
     align-items: end; /* Alinha verticalmente os itens */
@@ -265,6 +293,11 @@ body{
     z-index: 10; /* Garante que o botão fique acima de outros elementos */
 }
 
+.setas-desativado {
+    opacity: 0.09; /* Diminuir a opacidade para dar a sensação de desativado */
+    pointer-events: none; /* Desabilitar eventos de clique */
+}
+
 #setas::before {
     content: ''; /* Cria um pseudo-elemento */
     background-image: url(../IMG/setaSwap.png);
@@ -276,6 +309,43 @@ body{
     transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
     width: 20px; 
     height: 20px;
+}
+
+/* Estilo do popUp */
+.pop {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+/* Estilo do conteúdo do PopUp */
+.contentPop {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Largura do modal */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Media Queries para Responsividade */
@@ -331,19 +401,37 @@ body{
 
     #txtLogin {
         font-size: large; /* Ajusta o tamanho da fonte */
+        grid-column: 2 / 5 ;
+        grid-row: 1 / 2;
     }
 
     #usuario,
-    #senha {
+    #senha,
+    #email {
         height: 35px; /* Ajusta a altura dos inputs */
         font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+    
+    .inputUsuario {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .inputSenha {
+        grid-column: 2 / 5;
+        grid-row: 3 / 4; 
+    }
+
+    #inputEmail{
+        grid-column: 2 / 5;
+        grid-row: 4 / 5;
     }
 
     #entrar {
         padding: 8px 16px; /* Reduz o padding */
         font-size: medium; /* Ajusta o tamanho da fonte */
         grid-column: 2 / 5;
-        grid-row: 5 / 6 ;
+        grid-row: 4 / 6 ;
     }
 
     #setas {
@@ -355,7 +443,7 @@ body{
         align-items: center; /* Alinha verticalmente os itens */
         margin-top: 40px; /* Espaçamento entre o input de senha e este contêiner */
         grid-column: 2 / 5;
-        grid-row: 4 / 5;
+        grid-row: 3 / 4;
         justify-content: space-between; /* Distribui o espaço entre os itens */
     }
 
@@ -379,7 +467,7 @@ body{
         margin: 5px;
     }
 
-    #cadeado, #imgPessoa {
+    #cadeado, #imgPessoa, #carta {
         transform: translateY(-110%); /* Centraliza verticalmente */
         width: 1.5em; 
         height: 1.5em;
