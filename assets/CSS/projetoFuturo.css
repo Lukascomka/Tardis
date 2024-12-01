@@ -835,6 +835,19 @@ button[type="submit"]:hover {
       top: -10px; 
       
     }
+    .banner-principal {
+  width: 100%; 
+  height: auto; 
+  overflow: hidden; 
+}
+
+.banner-principal img {
+  max-height: 400px; 
+    width: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
 
     .logo-container img {
       width: 70px; 
