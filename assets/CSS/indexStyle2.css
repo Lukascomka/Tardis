@@ -21,7 +21,7 @@ section {
     align-items: center;
 
     .title {
-      margin-left: 10px;
+      margin-left: 70px;
       font-size: 600%;
       color: white;
       transform: translateY(-120px);
@@ -86,7 +86,9 @@ section {
           }
 
           .figure2{
-            background-image: url(../IMG/plane.png);
+            background-image: url(../IMG/indexLogoIntercambio.png);
+            width: 60px;
+            height: 40px;
 
           }
           .figure3{
@@ -449,14 +451,18 @@ section {
               &.active {
                 flex: 1 1;
                 overflow: visible;
-                &:before {
+
+                /* &:before {
                   content: '';
                   position: absolute;
                   height: calc(100% - 60px);
                   transform: translate(22px, 45px);
                   width: 2px;
                   background: black;
-                }
+                } */
+
+                
+
                 .col-overflow {
                   padding: 8px 32px 16px 60px;
                   /* text-align: justify; */
@@ -599,8 +605,8 @@ section{
       justify-content: center;
       /* margin-left: 70px; */
       img{
-        height: 360px;
-        width: 304px;
+        height: 420px;
+        width: 364px;
       }
 
       ol{
@@ -611,6 +617,7 @@ section{
          }
          li{
           font-weight: 900;
+          font-size: 30px;
          }
          hr{
           width: 100%;
@@ -703,6 +710,10 @@ section{
   vertical-align: middle;
 }
 
+.banner-principal {
+  width: 100%;
+}
+
 
 .footer {
   background-color: #003399;
@@ -787,4 +798,96 @@ section{
   padding-top: 25px;
   padding-left: 50px;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #003da5;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  
+  @media (max-width: 768px) {
+    .logo-wrapper {
+      visibility: visible; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .logo-container {
+      padding: 8px 12px; 
+            top: -15px; 
+            transform: translateX(-50%); 
+          }
+
+    .logo-container img {
+      width: 90px; 
+      height: auto; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-container {
+      padding: 5px 8px; 
+      top: -10px; 
+      
+    }
+    .banner-principal {
+  width: 100%; 
+  height: auto; 
+  overflow: hidden; 
+}
+
+.banner-principal img {
+  max-height: 400px; 
+    width: auto; 
+  display: block; 
+  margin: 0 auto; 
+}
+
+
+    .logo-container img {
+      width: 70px; 
+    }
+  }
 }

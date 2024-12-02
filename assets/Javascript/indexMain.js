@@ -7,6 +7,28 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   loop: true,
+  autoplay: {
+    delay: 2500, //milisegundos
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    200: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  },
 });
 
 //botão pesquisas
