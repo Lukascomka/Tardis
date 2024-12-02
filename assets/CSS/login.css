@@ -1,0 +1,484 @@
+* {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    background-color: white;
+    background-attachment: fixed;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faixa-laranja {
+    background-color: #ff6600;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, -20% 20%);
+    z-index: -5;
+}
+
+.faixa-azul {
+    background-color: #003DA5;
+    position: absolute;
+    top: 400px;
+    left: 0;
+    right: 0;
+    height: 570px; 
+    clip-path: polygon(0 0, 100% 80%, 100% 100%, 0 100%);
+    z-index: -5;
+}
+
+#divisor{
+    border-radius: 30px;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(50px, 1fr));
+    grid-template-rows: repeat(6, minmax(50px, 1fr));
+    height: 25em;
+    width: 30em;
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) 0%, rgba(255, 255, 255, 0.1)100%);
+    border-radius: 0px 30px 30px 0px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
+}
+
+.card1{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    height: 25em;
+    width: 15em;
+    background: linear-gradient(145deg, rgba(215, 205, 232, 0.4) 0%, rgba(255, 255, 255, 0.5)100%);
+    border-radius: 30px 0px 0px 30px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.2);
+    float: left;
+}
+
+ /* grid card1 */
+
+#logo{
+    width: 100%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+#link{
+    justify-self: center; /* Centraliza horizontalmente */
+    align-self: center; /* Centraliza verticalmente */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#bemVindo{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+    font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: 2px;    
+    color: #003DA5;
+}
+
+#insc{
+    grid-column: 1 / 4; 
+    grid-row: 3 / 4;
+    justify-self: center; /* Centraliza horizontalmente */
+    align-self: center; /* Centraliza verticalmente */
+    font-size: x-large; /* Aumenta o tamanho da fonte */
+    position: relative; /* Para o sublinhado */
+    margin: 10px;
+    text-align: center; /* Centraliza o texto */
+    letter-spacing: 2px;
+    color: #003DA5;
+}
+
+#insc::after {
+    content: ''; /* Cria um pseudo elemento */
+    display: block; /* Exibe como bloco */
+    width: 100%; /* Define a largura do sublinhado */
+    height: 2px; /* Define a altura do sublinhado */
+    background-color: #003DA5; /* Define a cor do sublinhado */
+    margin: auto; /* Centraliza o sublinhado */
+    bottom: -5px; /* Ajusta a posição do sublinhado em relação ao texto */
+    left: 25%; /* Centraliza o sublinhado em relação ao texto */
+}
+
+#criar{
+    border-radius: 2em;
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+    justify-self: center;
+    align-self: center;
+    background: linear-gradient(145deg, rgba(215, 205, 232, 0.4) 0%, rgba(255, 255, 255, 0.5)100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: blue; /* Define a cor do texto como azul */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: larger; /* Aumenta o tamanho da fonte do botão */
+    letter-spacing: 2px;
+    font-weight: bold; /* Define a fonte para Bold */
+}
+
+/* grid card */
+
+#txtLogin{
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    justify-self: center;
+    align-self: center;
+    font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #003DA5;
+}
+
+.inputUsuario {
+    position: relative; /* Para posicionar a imagem dentro do input */
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+}
+
+#imgPessoa{
+    position: absolute; /* Para posicionar a imagem dentro do input */
+    left: 0.5em;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-85%); /* Centraliza verticalmente */
+    width: 2em; 
+    height: 2em; 
+    pointer-events: none; /* Para que cliques na imagem não afetem a interação com o input */
+}
+
+#usuario{
+    padding-left: 40px; /* Adiciona padding à esquerda para evitar sobreposição com a imagem */
+    width: 100%; /* Faz o input ocupar toda a largura do container */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    border-radius: 15px; /* Arredondando as bordas */
+    border: 1px solid rgba(0, 61, 165, 0.5); /* Borda com transparência */
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) -400%, rgba(255, 255, 255, 0.1)100%);
+    backdrop-filter: blur(10px); /* Efeito de desfoque de fundo */
+    height: 40px;
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.inputSenha {
+    position: relative; /* Para posicionar a imagem dentro do input */
+    grid-column: 2 / 5;
+    grid-row: 4 / 5; 
+}
+    
+
+#cadeado {
+    position: absolute; /* Para posicionar a imagem dentro do input */
+    left: 0.5em; 
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-85%); /* Centraliza verticalmente */
+    width: 2em; 
+    height: 2em;
+    pointer-events: none; /* Para que cliques na imagem não afetem a interação com o input */
+    z-index: 1;
+}
+
+#senha {
+    padding-left: 40px; /* Espaço para a imagem do cadeado */
+    width: 100%; /* Faz o input ocupar toda a largura do container */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    border-radius: 15px; /* Arredondando as bordas */
+    border: 1px solid rgba(0, 61, 165, 0.5); /* Borda com transparência */
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) -400%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(10px); /* Efeito de desfoque de fundo */
+    height: 40px; /* Altura do input */
+    font-size: 16px; /* Tamanho da fonte */
+    z-index: 2; /* Coloca o campo de senha acima do ícone */
+}
+
+#inputEmail{
+    position: relative; /* Para posicionar a imagem dentro do input */
+    grid-column: 2 / 5;
+    grid-row: 5 / 6;
+}
+
+#carta{
+    position: absolute; /* Para posicionar a imagem dentro do input */
+    left: 0.7em; 
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-100%); /* Centraliza verticalmente */
+    width: 1.6em; 
+    height: 1.6em;
+    pointer-events: none; /* Para que cliques na imagem não afetem a interação com o input */
+    z-index: 1;
+}
+
+#email{
+    padding-left: 40px; /* Espaço para a imagem do cadeado */
+    width: 100%; /* Faz o input ocupar toda a largura do container */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+    border-radius: 15px; /* Arredondando as bordas */
+    border: 1px solid rgba(0, 61, 165, 0.5); /* Borda com transparência */
+    background: linear-gradient(145deg, rgba(0,61,165,0.2) -400%, rgba(255, 255, 255, 0.1) 100%);
+    backdrop-filter: blur(10px); /* Efeito de desfoque de fundo */
+    height: 40px; /* Altura do input */
+    font-size: 16px; /* Tamanho da fonte */
+    z-index: 2; /* Coloca o campo de senha acima do ícone */
+}
+
+.checkContainer {
+    display: flex; /* Usando flexbox para alinhar os elementos */
+    align-items: end; /* Alinha verticalmente os itens */
+    margin-top: 35px; /* Espaçamento entre o input de senha e este contêiner */
+    grid-column: 2 / 5;
+    grid-row: 4 / 5;
+    position: relative; /* Para que o z-index funcione */
+    z-index: 1;
+}
+
+.checkContainer input[type="checkbox"] {
+    margin-right: 2px; /* Espaçamento entre o checkbox e a label */
+}
+
+.checkContainer label {
+    margin-right: 30px; /* Aumenta o espaço entre a label e o link */
+}
+
+#esqueceu{
+    margin-left: auto; /* Move o link para a direita */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: rgba(0, 61, 165, 1); /* Cor do link */
+    font-size: 14px; /* Tamanho da fonte do link */
+    z-index: 2; /* Aumenta o z-index do link */
+}
+
+#entrar{
+    grid-column: 2 / 5;
+    grid-row: 6 / 7 ;
+    justify-self: center;
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #003DA5;
+    color: white;
+    font-weight: bolder;
+    font-size: medium;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    width: 100%; /* Faz o botão ocupar toda a largura da célula da grade */
+    max-width: 200px; /* Limita a largura máxima do botão, se necessário */
+}
+
+#setas {
+    position: absolute; /* Permite o posicionamento absoluto */
+    top: 50%; 
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-350%, -40%); /* Centraliza o botão */
+    border: none; /* Sem borda */
+    border-radius: 50%; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    z-index: 10; /* Garante que o botão fique acima de outros elementos */
+}
+
+.setas-desativado {
+    opacity: 0.09; /* Diminuir a opacidade para dar a sensação de desativado */
+    pointer-events: none; /* Desabilitar eventos de clique */
+}
+
+#setas::before {
+    content: ''; /* Cria um pseudo-elemento */
+    background-image: url(../IMG/setaSwap.png);
+    background-size: contain; /* Ajusta a imagem para caber dentro do botão */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    position: absolute; /* Posiciona o pseudo-elemento em relação ao botão */
+    left: 10px;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+    width: 20px; 
+    height: 20px;
+}
+
+/* Estilo do popUp */
+.pop {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+/* Estilo do conteúdo do PopUp */
+.contentPop {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 15% auto; /* Centraliza o popUp */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Largura do popUp */
+    border-radius: 10px;
+    text-align: center;
+}
+
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 412px) {
+    
+    #divisor{
+        align-items: start;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 5fr;
+        justify-items: center;
+    }
+
+    .card {
+        grid-template-columns: repeat(5, minmax(50px, 1fr));
+        grid-template-rows: repeat(5, minmax(50px, 1fr));
+        border-radius: 0 0 30px 30px;
+        height: 20em;
+        width: 80%; /* Ajusta para ocupar 80% da largura da tela */
+        max-width: 400px; /* Limita a largura máxima */
+    }
+
+    .card1 {
+        align-self: end;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        border-radius: 30px 30px 0 0;
+        height: 10em;
+        width: 80%; /* Ajusta para ocupar 80% da largura da tela */
+        max-width: 400px; /* Limita a largura máxima */
+    }
+
+    #logo {
+        width: 80%; /* Ajusta a largura da imagem */
+    }
+
+    #link{
+        text-align-last: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #bemVindo {
+        font-size: x-large; /* Ajusta o tamanho da fonte */
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+        margin-left: 2px;
+    }
+
+    #insc {
+        display: none;
+    }
+
+    #txtLogin {
+        font-size: large; /* Ajusta o tamanho da fonte */
+        grid-column: 2 / 5 ;
+        grid-row: 1 / 2;
+    }
+
+    #usuario,
+    #senha,
+    #email {
+        height: 35px; /* Ajusta a altura dos inputs */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+    
+    .inputUsuario {
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .inputSenha {
+        grid-column: 2 / 5;
+        grid-row: 3 / 4; 
+    }
+
+    #inputEmail{
+        grid-column: 2 / 5;
+        grid-row: 4 / 5;
+    }
+
+    #entrar {
+        padding: 8px 16px; /* Reduz o padding */
+        font-size: medium; /* Ajusta o tamanho da fonte */
+        grid-column: 2 / 5;
+        grid-row: 4 / 6 ;
+    }
+
+    #setas {
+        display: none;
+    }
+
+    .checkContainer {
+        display: flex; /* Usando flexbox para alinhar os elementos */
+        align-items: center; /* Alinha verticalmente os itens */
+        margin-top: 40px; /* Espaçamento entre o input de senha e este contêiner */
+        grid-column: 2 / 5;
+        grid-row: 3 / 4;
+        justify-content: space-between; /* Distribui o espaço entre os itens */
+    }
+
+    .checkContainer input[type="checkbox"] {
+        margin-right: 5px; /* Espaçamento entre o checkbox e a label */
+    }
+
+    .checkContainer label {
+        font-size: 10px; /* Ajusta o tamanho da fonte da label */
+    }
+
+    .esqueceu {
+        font-size: 10px; /* Tamanho da fonte do link */
+    }
+
+    #criar{
+        font-size: large;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        justify-self: center;
+        margin: 5px;
+    }
+
+    #cadeado, #imgPessoa, #carta {
+        transform: translateY(-110%); /* Centraliza verticalmente */
+        width: 1.5em; 
+        height: 1.5em;
+
+    }
+
+    .faixa-azul {
+        height: 585px; 
+    }
+}
