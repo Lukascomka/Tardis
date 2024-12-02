@@ -1,0 +1,11 @@
+#1 Alterar titulo "Viaje para lugares incríveis" e colocar mais para direita
+
+#2 Mudar icone do "Buscar intercambio"
+
+#3 Mudar o Swiper para mudar sozinho e com toque
+
+#4 Tirar o scroll do colx
+
+#5 Colocar o Empresa e Projeto para abrir em outra pagina
+
+#6 Aumentar todo conteudo Foto/Fonte do "Por que viajar conosco?" e subir a div
