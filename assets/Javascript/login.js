@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (entrarButton.textContent === "ENTRAR") {
 
             // Redireciona para a página desejada
-            window.location.href = ""; // redirect
+            window.location.href = "index.html"; // redirect
 
         } else if (entrarButton.textContent === "CADASTRAR") {
 
