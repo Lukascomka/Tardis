@@ -113,22 +113,29 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adiciona o evento de clique ao botão "CADASTRAR"
     entrarButton.addEventListener("click", function() {
 
-        if (entrarButton.textContent === "ENTRAR") {
+         // Obtém os valores dos inputs
+        const usuarioValue = usuarioInput.value.trim();
+        const emailInput = document.getElementById("email"); // Atualiza a referência ao emailInput
+        const emailValue = emailInput ? emailInput.value.trim() : ""; // Verifica se emailInput existe
+        const senhaValue = senhaInput.value.trim();
+
+        if (usuarioValue === "" || senhaValue === "") {
+            alert("Por favor, preencha todos os campos."); // Alerta se algum campo estiver vazio
+            return; // Interrompe a execução se algum campo estiver vazio
+
+        } else if (entrarButton.textContent === "ENTRAR") {
+
             // Redireciona para a página desejada
             window.location.href = ""; // redirect
+
         } else if (entrarButton.textContent === "CADASTRAR") {
 
-            // Obtém os valores dos inputs
-            const usuarioValue = usuarioInput.value.trim();
-            const emailInput = document.getElementById("email"); // Atualiza a referência ao emailInput
-            const emailValue = emailInput ? emailInput.value.trim() : ""; // Verifica se emailInput existe
-            const senhaValue = senhaInput.value.trim();
-
-            // Verifica se todos os campos estão preenchidos
             if (usuarioValue === "" || emailValue === "" || senhaValue === "") {
                 alert("Por favor, preencha todos os campos."); // Alerta se algum campo estiver vazio
                 return; // Interrompe a execução se algum campo estiver vazio
             }
+            
+            // Verifica se todos os campos estão preenchidos
 
             salvarDados(usuarioValue, emailValue, senhaValue);
             mostrarPopUp(); // Mostra o Pop-Up apenas quando "CADASTRAR" é clicado
