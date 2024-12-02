@@ -2,6 +2,11 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+button{
+  background-color: rgba(0, 0, 0, 0);
 }
 
 section {
@@ -16,7 +21,7 @@ section {
     align-items: center;
 
     .title {
-      margin-left: 10px;
+      margin-left: 70px;
       font-size: 600%;
       color: white;
       transform: translateY(-120px);
@@ -81,7 +86,9 @@ section {
           }
 
           .figure2{
-            background-image: url(../IMG/plane.png);
+            background-image: url(../IMG/indexLogoIntercambio.png);
+            width: 60px;
+            height: 40px;
 
           }
           .figure3{
@@ -224,7 +231,7 @@ body {
     margin: 0 20px 0 auto;
     border-radius: 30px;
 
-    button {
+    button{
       color: #003da5;
       font-weight: bolder;
       font-size: 20px;
@@ -444,14 +451,18 @@ section {
               &.active {
                 flex: 1 1;
                 overflow: visible;
-                &:before {
+
+                /* &:before {
                   content: '';
                   position: absolute;
                   height: calc(100% - 60px);
                   transform: translate(22px, 45px);
                   width: 2px;
                   background: black;
-                }
+                } */
+
+                
+
                 .col-overflow {
                   padding: 8px 32px 16px 60px;
                   /* text-align: justify; */
@@ -545,11 +556,13 @@ section {
 
 section{
   &.viaje-conosco{
-    margin: 200px 0 0 0;
-    margin-left: 15%;
+    margin: 1rem 0 9rem 0;
+    /* margin-left: 15%; */
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 80vh;
+    align-items: center;
+    /* justify-content: center; */
     flex-direction: column;
     /* border: 2px solid black; */
     .content{
@@ -575,7 +588,8 @@ section{
 
       h1{
         color: blue;
-        font-size: 4.5em;
+        font-size: 7.5em;
+        margin: 0 0 75px 0 ;
       }
 
       p{
@@ -588,11 +602,11 @@ section{
     .list{
       display: flex;
       align-items: center;
-      /* justify-content: center; */
-      margin-left: 70px;
+      justify-content: center;
+      /* margin-left: 70px; */
       img{
-        height: 360px;
-        width: 304px;
+        height: 420px;
+        width: 364px;
       }
 
       ol{
@@ -600,12 +614,14 @@ section{
          p{
            margin: 0px;
            font-style: italic;
+           font-size: 18px;
          }
          li{
           font-weight: 900;
+          font-size: 30px;
          }
          hr{
-          width: 110%;
+          width: 100%;
 
          }
       }
@@ -615,58 +631,47 @@ section{
 }
 
 
-/* Código Lucas abaixo */
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #fff; /* Define a cor de fundo da página */
-}
-
-/* Navbar para mobile, tablet e PC */
 .header-menu-principal {
-  background-color: #003da5; /* Define a cor de fundo da navbar */
-  position: relative; /* Posiciona o elemento em relação ao fluxo normal */
-  padding: 10px 30px; /* Adiciona espaçamento interno */
+  background-color: #003da5;
+  position: relative;
+  padding: 10px 30px;
 }
 
-/* Menu principal utilizando Grid Layout */
 .menu {
-  display: grid; /* Define a área como grid */
-  grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr; /* Configura as colunas do grid */
-  grid-template-areas: "inicio futuro logo-space sobre passagens login"; /* Define as áreas do grid */
-  align-items: center; /* Alinha os itens no centro verticalmente */
-  gap: 20px; /* Adiciona espaçamento entre os itens */
-  max-width: 1200px; /* Define a largura máxima */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  position: relative; /* Permite posicionamento relativo */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 0.8fr 1fr 0.8fr;
+  grid-template-areas: "inicio futuro logo-space sobre passagens login";
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
 
-/* Espaço reservado para o logo no grid */
 .logo-wrapper {
-  grid-area: logo-space; /* Associa o elemento à área do grid */
-  height: 100%; /* Define a altura completa */
-  visibility: hidden; /* Torna o elemento invisível */
+  grid-area: logo-space;
+  height: 100%;
+  visibility: hidden;
 }
 
-/* Container do logo com fundo branco */
 .logo-container {
-  background-color: white; /* Fundo branco para destacar o logo */
-  padding: 15px 25px; /* Espaçamento interno */
-  border-radius: 0 0 15px 15px; /* Borda arredondada na parte inferior */
-  position: absolute; /* Posicionamento absoluto dentro do pai */
-  top: -10px; /* Ajusta a posição vertical */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Garante centralização precisa */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  z-index: 1000; /* Coloca o elemento acima de outros */
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 0 0 15px 15px;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .logo-container img {
-  width: 120px; /* Define a largura da imagem */
-  height: auto; /* Mantém a proporção da imagem */
-  display: block; /* Remove o espaçamento abaixo da imagem */
+  width: 120px;
+  height: auto;
+  display: block;
 }
 
-/* Posiciona cada link na área do grid correspondente */
 .menu a:nth-child(1) {
   grid-area: inicio;
 }
@@ -675,120 +680,215 @@ body {
 }
 .menu a:nth-child(5) {
   grid-area: sobre;
-  justify-self: end; /* Alinha o link à direita */
-  padding-right: 10px; /* Adiciona espaçamento à direita */
+  justify-self: end;
+  padding-right: 10px;
 }
 .menu a:nth-child(6) {
   grid-area: passagens;
-  justify-self: start; /* Alinha o link à esquerda */
-  padding-left: 20px; /* Adiciona espaçamento à esquerda */
+  justify-self: start;
+  padding-left: 20px;
 }
 .menu a:nth-child(7) {
   grid-area: login;
-  justify-self: end; /* Alinha o link à direita */
+  justify-self: end;
 }
 
-/* Estilização geral para os links */
 .menu a {
-  text-decoration: none; /* Remove o sublinhado */
-  color: white; /* Define a cor do texto */
-  text-align: center; /* Centraliza o texto */
-  white-space: nowrap; /* Impede quebra de linha */
-  font-size: 16px; /* Define o tamanho da fonte */
-  position: relative; /* Permite posicionamento relativo */
-  z-index: 1; /* Garante que o link esteja acima de outros elementos */
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
 }
 
-/* Estilo para ícones de usuário */
 .user-icon {
-  width: 25px; /* Largura do ícone */
-  height: auto; /* Mantém a proporção do ícone */
-  vertical-align: middle; /* Alinha verticalmente com o texto */
+  width: 25px;
+  height: auto;
+  vertical-align: middle;
 }
 
-/* Estilo do banner principal */
 .banner-principal {
-  width: 100%; /* Largura completa */
+  width: 100%;
 }
 
-/* Configura layout principal com grid */
-.conteudo-principal {
-  display: grid; /* Define layout como grid */
-  grid: auto 20px auto; /* Configura linhas automáticas com espaçamento */
-  max-width: 1200px; /* Largura máxima */
-  margin: 0 auto; /* Centraliza horizontalmente */
-  padding: 20px; /* Adiciona espaçamento interno */
+
+.footer {
+  background-color: #003399;
+  position: relative;
+  padding: 0;
+  margin-left: 90%;
+  margin-right: 90%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 8.8fr 0fr;
+  grid-template-rows: 2fr 1fr 1.5fr 8.8fr 0fr;
+  grid-template-areas: "instagram facebook x copy fundo-logo";
+  align-items: center;
+  gap: 0;
+  min-width: 1200px;
+  margin: 0;
+  right: 0;
+  bottom: 0;
+  height: 60px;
 }
 
-/* Configurações da seção hero */
-.hero-section {
-  position: relative; /* Posicionamento relativo para sobreposição */
-  min-height: 600px; /* Altura mínima */
-  width: 100%; /* Largura completa */
-  overflow: hidden; /* Esconde o conteúdo excedente */
+.fundo-logo2 {
+  grid-area: fundo-logo;
+  height: 100%;
+  visibility: hidden;
 }
 
-.strip-container {
-  position: relative; /* Posicionamento relativo */
-  width: 100%; /* Largura completa */
-  height: 100%; /* Altura completa */
+.fundo-logo-footer {
+  background-color: white;
+  padding: 28px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 89.5%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
-/* Faixa laranja no topo */
-.faixa-laranja {
-  background-color: #ff6600; /* Define a cor laranja */
-  position: absolute; /* Posicionamento absoluto */
-  top: 0; /* Alinha no topo */
-  left: 0; /* Alinha à esquerda */
-  height: 300px; /* Altura da faixa */
-  width: 100%; /* Largura completa */
-  clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    0 20%
-  ); /* Define forma com cortes diagonais */
-  z-index: 1; /* Camada abaixo de outros elementos */
+.fundo-logo-footer img {
+  width: 130px;
+  height: auto;
 }
 
-.main-title {
-  position: absolute; /* Posicionamento absoluto */
-  top: 102px; /* Ajusta a posição vertical */
-  width: 100%; /* Largura completa */
-  text-align: center; /* Centraliza texto */
-  font-size: 5.5rem; /* Tamanho grande */
-  font-weight: 900; /* Negrito intenso */
-  text-transform: uppercase; /* Texto em maiúsculas */
-  letter-spacing: 4px; /* Espaçamento entre letras */
-  z-index: 2; /* Garante sobreposição */
-  right: -4%; /* Ajusta posição horizontal */
+.footer a:nth-child(1) {
+  grid-area: instagram;
+  padding-left: 20px;
 }
 
-/* Responsividade */
+.footer a:nth-child(2) {
+  grid-area: facebook;
+  padding-left: 20px;
+}
+
+.footer a:nth-child(3) {
+  grid-area: x;
+  padding-left: 20px;
+  width: 30px;
+}
+
+.footer a {
+  max-width: 20px;
+  height: auto;
+  position: relative;
+  white-space: nowrap;
+}
+
+.redes-sociais {
+  align-items: center;
+  padding: 0;
+  position: absolute;
+  left: 30px;
+  z-index: 1000;
+}
+
+.redes-sociais img {
+  width: 30px;
+  height: auto;
+  display: inline-block;
+}
+
+.copy {
+  grid-area: copy;
+  padding-top: 25px;
+  padding-left: 50px;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .menu {
-    grid-template-columns: repeat(2, 1fr); /* Altera para 2 colunas */
-    grid-template-areas:
-      "logo-space login"
-      "inicio futuro"
-      "sobre passagens"; /* Reorganiza as áreas */
-    gap: 25px; /* Ajusta espaçamento */
-    padding-top: 70px; /* Adiciona espaçamento superior */
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #003da5;
+    padding: 20px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    border-radius: 8px;
+    z-index: 1000;
   }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  
+  @media (max-width: 768px) {
+    .logo-wrapper {
+      visibility: visible; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+
+    .logo-container {
+      padding: 8px 12px; 
+            top: -15px; 
+            transform: translateX(-50%); 
+          }
+
+    .logo-container img {
+      width: 90px; 
+      height: auto; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    .logo-container {
+      padding: 5px 8px; 
+      top: -10px; 
+      
+    }
+    .banner-principal {
+  width: 100%; 
+  height: auto; 
+  overflow: hidden; 
 }
 
-@media (max-width: 480px) {
-  .menu {
-    grid-template-columns: 1fr; /* Configura uma coluna */
-    grid-template-areas:
-      "logo-space"
-      "login"
-      "inicio"
-      "futuro"
-      "sobre"
-      "passagens"; /* Empilha os itens */
-    gap: 10px; /* Reduz o espaçamento */
-    padding-top: 80px; /* Ajusta espaçamento superior */
-  }
+.banner-principal img {
+  max-height: 400px; 
+    width: auto; 
+  display: block; 
+  margin: 0 auto; 
 }
 
+
+    .logo-container img {
+      width: 70px; 
+    }
+  }
+}

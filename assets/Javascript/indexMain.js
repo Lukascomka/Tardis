@@ -67,9 +67,9 @@ buttonm.forEach((button) => {
 });
 
 document.getElementById("btn-projeto").addEventListener("click", () => {
-  window.location.href = "projetoFuturo.html";
+  window.open("projetoFuturo.html","_blank");
 });
 
 document.getElementById("btn-empresa").addEventListener("click", () => {
-  window.location.href = "sobreNos.html";
+  window.open("sobreNos.html", "_blank");
 });
