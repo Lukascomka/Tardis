@@ -201,8 +201,11 @@ body {
 .top-destinos {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 120px;
   width: 50%;
+  gap: 24px;
+  padding: 24px;
   background-color: #003da5;
   border-radius: 25px;
   margin-left: 25px;
@@ -210,14 +213,12 @@ body {
   .item1 {
     color: white;
     font-size: 70px;
-    margin-left: 30px;
     font-weight: bolder;
   }
 
   .item2 {
     color: white;
     font-size: 25px;
-    margin-left: 30px;
     font-weight: bolder;
   }
 
@@ -373,11 +374,17 @@ section {
         width: 100%;
         /* border: 1px solid black; */
         position: relative;
+
+        .info {
+          width: 100%;
+        }
+
         img{
+          object-fit: cover;
           margin-left: 10%;
-          width: auto;
+          width: 100%;
           height: auto;
-          
+          border-radius: 32px;
         }
 
         .title{
@@ -385,7 +392,7 @@ section {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-left: 15%;
+          margin:0 0 24px 15%;
           color: white;
           background-color: #003DA5;
           width: 100%;
@@ -393,21 +400,19 @@ section {
           border-radius: 32px;
         }
 
-        .text{
-          position: absolute;
-          margin: 10% 0 0 15%;
+        .text {
+          margin-left: 15%;
+          margin-bottom: 50px;
           p{
-            font-size: 3.5em;
-            margin-bottom: 0px;
+            font-size: 24px;
           }
         }
 
         .figures{
           align-self: flex-end;
           /* border: 1px solid black; */
-          height: 500px;
+          height: 418px;
           width: 300px;
-          position: absolute;
           margin-left: 15%;
           /* margin-bottom: 0px; */
 
@@ -473,7 +478,7 @@ section {
                   opacity: 1;
                 }
                 .col-title {
-                  font-size: xx-large;
+                  font-size: larger;
                   font-weight: bold;
                   
                   &:after {
@@ -519,7 +524,7 @@ section {
       font-size: 6em;
     }
     p{
-      font-size: 1.5em;
+      font-size: 2.5em;
       margin: 0;
       &:nth-child(3) {
         margin-top: 40px;
@@ -528,17 +533,18 @@ section {
   }
 
   .buttons-more{
-    position: absolute;
     display: flex;
     width: 800px;
     height: 80px;
     gap: 50px;
     top: 70%;
     left: 50px;
+    padding: 0 16px;
+
     .button-more{
       background-color: rgba(0, 0, 0, 0);
       color: white;
-      width: 100%;
+      flex: 1 auto;
       font-size: 3.5em;
       font-style: italic;
       border-radius: 16px;

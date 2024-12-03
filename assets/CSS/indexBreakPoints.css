@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 1366px) {
   body {
     width: 100%;
@@ -7,9 +6,6 @@
   section {
     &.slider {
       .top-destinos {
-        height: auto;
-        width: auto;
-
         .icon {
           position: unset;
           width: auto;
@@ -48,10 +44,6 @@
       .columns {
         flex-direction: column;
         .column {
-          .top-destinos {
-            margin-left: auto;
-            width: 80%;
-          }
 
           .islands {
             height: auto;
@@ -98,8 +90,6 @@
         }
       }
 
-
-
     }
   }
 
@@ -134,12 +124,9 @@
             font-size: large;
           }
           .text{
-            margin-top: 100px;
-            margin-bottom: 0px;
-            margin-left: 50px;
             p{
               font-size: 24px;
-                        }
+            }
           }
         }
       }
@@ -148,7 +135,17 @@
 }
 
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1024px){
+  .logo-container {
+    &.mobile {
+      display: none;
+    }
+  }
+
+  .logo-container {
+    left: 44%;
+  }
+
   section{
     &.banner{
       .title{
@@ -168,8 +165,9 @@
         padding: 16px;
 
         .title {
-          margin: 0;
+          margin: 0 0 32px 0;
           width: 100%;
+          height: 46px;
         }
 
         .text {
@@ -224,11 +222,11 @@
   }
 
 
-}
+  }
 }
 
 
-@media only screen and (max-width: 540px){
+@media only screen and (max-width: 992px) {
   section{
     &.banner{
       .title{
@@ -265,93 +263,88 @@
       }
     }
 
-  &.slider{
-    .top-destinos {
-    
-      .item1 {
+    &.slider{
+      .top-destinos {
+      
+        .item1 {
 
-        font-size: xx-large;
+          font-size: xx-large;
 
-      }
-    
-      .item2 {
-        margin-left: 20px;
-        font-size: medium;
-
-      }
-    
-      .item3 {
-        width: 140px;
-        height: 40px;
-        margin: 0 0 0 5px;
-        button{
-          font-size: small;
         }
-      }
-      .icon{
-        display: none;
+      
+        .item2 {
+          margin-left: 20px;
+          font-size: medium;
+
+        }
+      
+        .item3 {
+          width: 140px;
+          height: 40px;
+          margin: 0 0 0 5px;
+          button{
+            font-size: small;
+          }
+        }
+        .icon{
+          display: none;
+        }
       }
     }
-  }
 
-  &.locations{
-    &.locations {
+    &.locations{
+        .columns {
 
-      .columns {
+          /* .change{
+            height: 500px;
+          } */
+          .column {
+            /* height: 800px; */
+    
+            .island {
 
-        .change{
-          height: 500px;
-        }
-        .column {
-          /* height: 800px; */
-  
-          .island {
+    
+              .info {
+                padding: 4px 4px;
+              
 
-  
-            .info {
-              padding: 4px 4px;
-            
+              }
+    
 
             }
-  
+    
+            .top-destinos {
+              .item1{
+                font-size: xx-large;            
+              }
 
-          }
-  
-          .top-destinos {
-            width: 100%;
-            height: 60px;
+              .item2{
+                font-size: 14px;
+                margin-bottom: 0px;
+              }
 
-            .item1{
-              font-size: xx-large;            
-            }
-
-            .item2{
-              font-size: 14px;
-              margin-bottom: 0px;
-            }
-
-            .item3{
-              width: 140px;
-              height: 40px;
-              margin: 0 0 0 10px;
-              button{
-                font-size: small;
+              .item3{
+                width: 140px;
+                height: 40px;
+                margin: 0 0 0 10px;
+                button{
+                  font-size: small;
+                }
               }
             }
-          }
-  
-          &.limit-height {
-            .island {
-              img{
-                object-position: 0;
+    
+            &.limit-height {
+              .island {
+                img{
+                  object-position: 0;
 
+              }
             }
-          }
 
+          }
         }
       }
     }
-  }
   }
 
   &.projeto {
@@ -375,6 +368,8 @@
   }
 
   &.saiba-mais{
+
+    margin: 0;
 
     .text{
       padding-top: 0px;
@@ -436,4 +431,35 @@
     
   }
 }
+
+@media only screen and (max-width: 500px) {
+  section {
+    &.viaje-conosco {
+      & .list {
+        img {
+          display: none;
+        }
+      }
+    }
+
+    &.saiba-mais {
+      & .text {
+        & p {
+          &:nth-child(3) {
+            margin-top: 20px;
+          }
+          font-size: large;
+        }
+      }
+
+      .buttons-more {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .top-destinos {
+    margin: 0 !important;
+    width: 100% !important;
+  }
 }
