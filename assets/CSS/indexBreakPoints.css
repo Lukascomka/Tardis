@@ -1,4 +1,5 @@
-@media only screen and (max-width: 768px) and (min-width: 2px) {
+
+@media only screen and (max-width: 1366px) {
   body {
     width: 100%;
   }
@@ -17,35 +18,7 @@
       }
     }
 
-    &.projeto {
-      .content {
-        flex-direction: column;
-        .columns {
-          flex-direction: column;
-          height: auto;
-          margin: 0;
-          padding: 16px;
-
-          .title {
-            margin: 0;
-            width: 100%;
-          }
-
-          .text {
-            position: unset;
-            margin: 0;
-          }
-
-
-          .figures {
-            position: unset;
-            width: 100%;
-            margin-left: 0;
-            height: auto;
-          }
-        }
-      }
-    }
+   
 
     &.saiba-mais {
       background-position: 0;
@@ -82,6 +55,12 @@
 
           .islands {
             height: auto;
+            .island{
+              height: auto;
+            }
+          }
+          .island{
+            height: auto;
           }
 
           &:first-child {
@@ -101,6 +80,26 @@
             margin: 0 0 75px 0;
         }
       }
+
+
+      .list{
+        ol{
+  
+           p{
+             font-size: large;
+           }
+           li{
+            font-size: large;
+           }
+           hr{
+            width: 100%;
+  
+           }
+        }
+      }
+
+
+
     }
   }
 
@@ -126,10 +125,315 @@
   }
 }
 
-
-@media only screen and (min-width: 992px) {
-  body {
-    /* Tratar algo no desktop */
-  }
+@media only screen and (max-width: 1170px){
+  section{
+    &.projeto {
+      .content{
+        .columns{
+          .title{
+            font-size: large;
+          }
+          .text{
+            margin-top: 100px;
+            margin-bottom: 0px;
+            margin-left: 50px;
+            p{
+              font-size: 24px;
+                        }
+          }
+        }
+      }
+    }
+}
 }
 
+
+@media only screen and (max-width: 1000px){
+  section{
+    &.banner{
+      .title{
+        font-size: 400%;
+        margin-left: 40px;
+      }
+    }
+
+
+  &.projeto {
+    .content {
+      flex-direction: column;
+      .columns {
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+        padding: 16px;
+
+        .title {
+          margin: 0;
+          width: 100%;
+        }
+
+        .text {
+          position: unset;
+          margin: 0 0 50px 0;
+        }
+    
+
+        .figures {
+          position: unset;
+          width: 100%;
+          margin-left: 0;
+          height: auto;
+        }
+
+        img{
+          height: 800px;
+          width: 600px;
+          display: none;
+        }
+      }
+    }
+  }
+  &.viaje-conosco {
+    & .text {
+      h1 {
+          color: blue;
+          font-size: xx-large;
+          margin: 0 0 75px 0;
+      }
+    }
+
+
+    .list{
+      ol{
+
+         p{
+           font-size: large;
+         }
+         li{
+          font-size: large;
+         }
+         hr{
+          width: 100%;
+
+         }
+      }
+    }
+
+
+
+  }
+
+
+}
+}
+
+
+@media only screen and (max-width: 540px){
+  section{
+    &.banner{
+      .title{
+        font-size: 300%;
+        margin-left: 40px;
+      }
+    }
+
+    &.pesquisa {
+
+      .controller {
+        height: 150px;
+
+        .pesquisa-lista{
+          .itempesquisa{
+            width: 100%;
+            i{
+              display: none;
+            }
+          }
+        }
+
+
+
+        .pesquisa-conteudo {
+          height: calc(150px - 80px);
+          form {
+            input {
+              height: 50px;
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+
+  &.slider{
+    .top-destinos {
+    
+      .item1 {
+
+        font-size: xx-large;
+
+      }
+    
+      .item2 {
+        margin-left: 20px;
+        font-size: medium;
+
+      }
+    
+      .item3 {
+        width: 140px;
+        height: 40px;
+        margin: 0 0 0 5px;
+        button{
+          font-size: small;
+        }
+      }
+      .icon{
+        display: none;
+      }
+    }
+  }
+
+  &.locations{
+    &.locations {
+
+      .columns {
+
+        .change{
+          height: 500px;
+        }
+        .column {
+          /* height: 800px; */
+  
+          .island {
+
+  
+            .info {
+              padding: 4px 4px;
+            
+
+            }
+  
+
+          }
+  
+          .top-destinos {
+            width: 100%;
+            height: 60px;
+
+            .item1{
+              font-size: xx-large;            
+            }
+
+            .item2{
+              font-size: 14px;
+              margin-bottom: 0px;
+            }
+
+            .item3{
+              width: 140px;
+              height: 40px;
+              margin: 0 0 0 10px;
+              button{
+                font-size: small;
+              }
+            }
+          }
+  
+          &.limit-height {
+            .island {
+              img{
+                object-position: 0;
+
+            }
+          }
+
+        }
+      }
+    }
+  }
+  }
+
+  &.projeto {
+    margin-top: 150px;
+
+    .content{
+      .columns{
+        .title{
+          font-size: 24px;
+        }
+        .text{
+          margin-top: 30px;
+          margin-bottom: 30px;
+          margin-left: 20px;
+          p{
+            font-size: 2em;
+                      }
+        }
+      }
+    }
+  }
+
+  &.saiba-mais{
+
+    .text{
+      padding-top: 0px;
+      h1{
+        font-size: xx-large;
+      }
+      p{
+        font-size: small;
+      }
+    }
+  
+    .buttons-more{
+      margin-top: 100px;
+      .button-more{
+        font-size: xx-large;
+      }
+    }
+  }
+
+  &.viaje-conosco{
+    height: 90vh;
+
+    .text{
+
+      /* margin-bottom: 50px; */
+
+      h1{
+        margin-bottom: 5px;
+      }
+
+      p{
+        font-size: medium;
+        margin-left: 20px;
+      }
+
+    }
+
+    .list{
+
+      img{
+        height: 240px;
+
+      }
+
+      ol{
+
+         p{
+          font-size: 14px;
+         }
+         li{
+          font-size: 14px;
+         }
+         hr{
+          font-size: small;
+
+         }
+      }
+    }
+    
+  }
+}
+}
