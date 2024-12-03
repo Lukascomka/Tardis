@@ -23,9 +23,10 @@ body {
 }
 
 .header-menu-principal {
-  background-color: #003da5;
-  position: relative;
-  padding: 10px 30px;
+ margin-top: -25px;
+ background-color: #003da5;
+    position: relative;
+    padding: 10px 30px;
 }
 
 .menu {
