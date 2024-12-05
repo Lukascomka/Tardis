@@ -434,7 +434,17 @@
 
 @media only screen and (max-width: 500px) {
   section {
+    &.banner{
+      .title{
+        display: none;
+      }
+    }
+
     &.viaje-conosco {
+      margin-top: 40px;
+      ol{
+        margin-top: 50px;
+      }
       & .list {
         img {
           display: none;
