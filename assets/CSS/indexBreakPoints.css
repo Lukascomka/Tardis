@@ -136,7 +136,7 @@
 
 
 @media only screen and (max-width: 1024px){
-  .logo-container {
+  /* .logo-container {
     &.mobile {
       display: none;
     }
@@ -144,7 +144,7 @@
 
   .logo-container {
     left: 44%;
-  }
+  } */
 
   section{
     &.banner{
@@ -434,7 +434,17 @@
 
 @media only screen and (max-width: 500px) {
   section {
+    &.banner{
+      .title{
+        display: none;
+      }
+    }
+
     &.viaje-conosco {
+      margin-top: 40px;
+      ol{
+        margin-top: 50px;
+      }
       & .list {
         img {
           display: none;
