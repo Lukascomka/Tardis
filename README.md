@@ -48,16 +48,3 @@ O Instituto da Oportunidade Social incentiva os alunos a vivenciarem um ambiente
 ### Tela de Login
 ![Página de Login e Cadastre-se](assets/IMG/Figma/Login.png)
 ---
-## 👥 Equipe Envolvida
-
-- **Caio**  
-  ![!\[Caio \](./assets/integrante1.png)  ](assets/IMG/sobreNos-IMG/Caio.jpeg)
-- **Nicolas**  
- ![ !\[Nicolas\](./assets/integrante2.png)  ](assets/IMG/sobreNos-IMG/nicolas.jpeg)
-<!-- - **Integrante 3**  
-  ![Foto do Integrante 3](./assets/integrante3.png)  
-- **Integrante 4**  
-  ![Foto do Integrante 4](./assets/integrante4.png)   -->
-
---- -->
-
